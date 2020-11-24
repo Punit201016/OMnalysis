@@ -1,0 +1,12 @@
+name: OMnalysis
+title: OMnalysis
+username:
+account: omnalysis
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2944189
+bundleId: 3888875
+url: https://omnalysis.shinyapps.io/OMnalysis/
+when: 1605981320.67816
+asMultiple: FALSE
+asStatic: FALSE
