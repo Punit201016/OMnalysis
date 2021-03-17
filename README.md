@@ -47,32 +47,32 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 <img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.PNG" height = "600" width = "500"> </img>
 1.	Scatter plot uses log fold change versus log counts per million to visualize your expression data in the form of up and down-regulated genes. Each dot in the scatter plot represents up-regulated genes (green colour),  non-significant genes (black colour) and downregulated genes (red colour).
 
-2.	The **slider input option** is available for the user to provide the numeric input P-value cutoff for both plots and FC-cutoff for volcano plot required to generate plots. The default numeric P-value cutoff is 0.02 and FC-cutoff is 1.2."),
-p("3.	Using", span(strong("plot title ", style = "color:white; background-color: black")), "option user can write a title to the generated plot (ex- Treatment-1)."), 
-p("4.	Volcano plot uses log fold change versus -log10 (P-value) so that the most significant and highly upregulated and downregulated genes can be visualized. In the volcano plot each red rhombus shape represents the gene with their gene name on it."),
-p("5.	After selecting the treatment user have to click on the", span(strong("checkbox of plots", style = "color:white; background-color: black")), "required to generate plots and Table to visualize the each treatment data with converted ids."),
-p("6.	The output of the plots can be downloadable in four supporting image formats jpeg, png, pdf and tiff using the drop-down format option."),
-p("7.	The dimension and the resolution of output plots can be adjusted with the help of", span(strong("numerical input tabs.", style = "color:white; background-color: black")), "The default value is 20, 20 and 300 for width, height and resolution respectively."),
-p("8.	After providing all the necessary information user can download the plots with the help of ", span(strong("Download button.", style = "color:white; background-color: black")) 
-))
-h3("Statistical filtering")
-img(src = "./www/om_4.png", height = 600, width = 700)
-strong(p("1.	With the help of ", span(strong("checkbox button treatments 1, 2, 3 and 4", style = "color:white; background-color: black"))," user can visualize the data and plot of the selected treatment."),
-p("2.", span(strong("Three numerical input boxes", style = "color:white; background-color: black"))," are provided to filter out the genes that are unable to cross the threshold values. Three statistical parameters are log counts per million (expression value), log fold change (magnitude of change) and P-value (value of significance) provided to obtain significantly differentially expressed genes."),
-p("3.	Use the", span(strong("Venn diagram checkbox", style = "color:white; background-color: black"))," to visualize the common significantly differentially expressed genes in the uploaded treatments. Also, you can use a Venn diagram to obtain common or different up and down-regulated genes sharing in two groups of treatments."),
-p("4.	The dimension and the resolution of output Venn diagram and histogram can be adjusted with the help of ", span(strong("numerical input tabs.", style = "color:white; background-color: black"))," The default value is 20, 20 and 300 for width, height and resolution respectively."),
-p("5.	Two separate ", span(strong("download tabs", style = "color:white; background-color: black"))," first and second are provided to download Venn diagram and histogram respectively."),
-p("6.	Using ", span(strong("histogram", style = "color:white; background-color: black")),"you can visualize the number of differentially expressed genes that falls on the log fold change range. Additionally, by using ", span(strong("all treatment checkbox ", style = "color:white; background-color: black")),"you can visualize the total number of up and down-regulated genes avialble in each treatment in a single histogram."),
-p("7.	Using", span(strong("Title", style = "color:white; background-color: black"))," option user can write the title to the generated diagram or histogram (ex- Treatment-1)."),
-p("8.	The Venn diagram and histogram can be downloadable in four supporting image formats jpeg, png, pdf and tiff using the drop-down format option."),
-p("9.	The generated diagram can be downloaded using the ", span(strong("Download button.", style = "color:white; background-color: black")))
-)
-h3("Gene ontology (GO) enrichment analysis")
-img(src = "./www/om_5.png", height = 400, width = 750)
-strong(p("1.	Use the ", span(strong("ontology classes checkbox", style = "color:white; background-color: black"))," to perform the categorical analysis of your expression data, either in the biological process (multiple molecular activities integrates to perform a process) or molecular function (activities at the molecular level by gene product) or cellular component (site of function concerning cellular structure)."),
-p("2. ", span(strong("	P-value cutoff", style = "color:white; background-color: black"))," and the ", span(strong("q-value cutoff", style = "color:white; background-color: black"))," are provided to obtain enriched test and significantly enriched test respectively. The default p-value and q-value cutoff is 0 and can be adjusted to 0.01 and 0.05."),
-p("3.	The methods provided to perform ", span(strong("gene ontology enrichment analysis", style = "color:white; background-color: black"))," are over-represented analysis (ORA), (based on hypergeometric test and mapping of genes to the annotated biological vocabulary) and gene set enrichment analysis (GSEA), (based on the Kolmogorov Smirnov test and consider gene set with their log fold change value)."),
-p("4.	The gene ontology analysis main panel is populated with ", span(strong("subtabs Ontology result-1, Ontology result-2, Ontology result-3, and  Ontology result-4 ", style = "color:white; background-color: black"))," each subtab shows the output result of the analysis."),
+2.	The **slider input option** is available for the user to provide the **numeric input P-value cutoff** for both plots and **FC-cutoff for volcano plot** required to generate plots. The default numeric P-value cutoff is 0.02 and FC-cutoff is 1.2.
+3.	Using **plot title option** user can write a title to the generated plot (example:- Treatment-1).
+4.	Volcano plot uses log fold change versus -log10 (P-value), so that the most significant and highly upregulated and downregulated genes can be visualized. In the volcano plot each red rhombus shape represents the gene with gene name.
+5.	After selecting the treatment user have to click on the **checkbox of plots** required to generate plots and table to visualize the each treatment data with converted ids.
+6.	The output of the plots can be downloadable in four supporting image formats jpeg, png, pdf and tiff **using the drop-down format option**.
+7.	The dimension and the resolution of output plots can be adjusted with the help of **numerical input tabs**. The default value is 20, 20 and 300 for width, height and resolution, respectively.
+8.	After providing all the necessary information user can download the plots with the help of **Download button**.
+
+# Statistical filtering
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_4.PNG" height = "600" width = "500"> </img>
+1.	With the help of **checkbox button treatments 1, 2, 3 and 4** you can visualize the data and plot of the selected treatment.
+2.  **Three numerical input boxes** are provided to filter out the genes that are unable to cross the threshold values. Three statistical parameters are log counts per million (expression value), log fold change (magnitude of change) and P-value (value of significance) provided to obtain significantly differentially expressed genes.
+3.	Use the **Venn diagram checkbox** to visualize the common significantly DEGs in the uploaded treatments. Also, you can use a Venn diagram to obtain common or different up and down-regulated genes in two group of treatments.
+4.	The dimension and the resolution of output Venn diagram and histogram can be adjusted with the help of **numerical input tabs**.The default value is 20, 20 and 300 for width, height and resolution, respectively.
+5.	Two separate **download tabs** first and second are provided to download Venn diagram and histogram, respectively.
+6.	Using **histogram** you can visualize the number of differentially expressed genes that falls on the log fold change range. Additionally, by using **all treatment checkbox** you can visualize the total number of up and down-regulated genes avialble in each treatment in a single histogram.
+7.	Using **Title** option you can write the title to the generated diagram or histogram (example:- Treatment-1)
+8.	The Venn diagram and histogram can be downloadable in four supporting **image formats jpeg, png, pdf and tiff using the drop-down format option.**
+9.	The generated diagram can be downloaded using the **Download button.**
+
+# Gene ontology (GO) enrichment analysis
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_5.PNG" height = "600" width = "500"> </img>
+1.	Use the **ontology classes checkbox** to perform the categorical analysis of your expression data, either in the biological process (multiple molecular activities integrates to perform a process) or molecular function (activities at the molecular level by gene product) or cellular component (site of function concerning cellular structure).
+2. 	**P-value cutoff** and the **q-value cutoff** are provided to obtain enriched test and significantly enriched test, respectively. The default p-value and q-value cutoff is 0 and can be adjusted to 0.01 and 0.05.
+3.	The methods provided to perform **gene ontology enrichment analysis** are **over-represented analysis (ORA)**, (based on hypergeometric test and mapping of genes to the annotated biological vocabulary) and **gene set enrichment analysis** (GSEA), (based on the Kolmogorov Smirnov test and consider gene set with their log fold change value).
+4.	The gene ontology analysis main panel is populated with **subtabs Ontology result-1, Ontology result-2, Ontology result-3, and  Ontology result-4** each subtab shows the output result of the analysis."),
 p("5.	After providing the necessary inputs click on the ", span(strong("Go button ", style = "color:white; background-color: black")),"to launch the enrichment analysis. Please keep in mind that in each treatment ontology enrichment analysis the same input values will be used."),
 p("6.	In the drop-down ", span(strong("pAadjust method tab,", style = "color:white; background-color: black")),"  7 adjustment methods Holm, Hochberg, Hommel,  Bonferroni,  Benjamini and Hochberg (BH),  Benjamini and Yekutieli (BY), FDR and none are provided to control false postive result. Above mentioned first four methods control the family-wise error rate (probability of making one or more false discoveries) and remaining methods control the expected proportion of discoveries that are rejected falsely (FDR). We suggest FDR correction methods for a more reliable result."),
 p("7.	From the ontology result table, you need to provide one go term by selecting only one row and same term in all the treatments. This information will be used for the visualization of heatmaps in the next GO heatmaps panel."),
