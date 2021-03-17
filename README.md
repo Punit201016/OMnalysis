@@ -14,9 +14,9 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 5. Install Bioconductor packages using Install.packages("BiocManager")
 6. install.packages(c("AnnotationDbi", "Biobase", "BiocFileCache", "BiocGenerics", "BiocParallel", "BiocVersion", "biomaRt", "Biostrings", "clusterProfiler", "DO.db", "DOSE", "EnhancedVolcano", "enrichplot", "fgsea", "GO.db", "GOSemSim", "graph", "graphite", "IRanges", "KEGGgraph", "KEGGREST", "org.Bt.eg.db", "org.Gg.eg.db", "org.Hs.eg.db", "org.Ss.eg.db", "pathview", "qvalue", "reactome.db", "ReactomePA", "Rgraphviz", "S4Vectors", "XVector", "zlibbioc"))
 
-DATA FORMAT
-strong(p("
-1. Upload data must be in comma-separated-value (.CSV) file."),
-p("2.	Headers must be true in the uploaded file."),
-p("3.	The first column must be biomarkers (In transcriptomics – Ensembl accession number)."),
-p("4.	Column names must be ENSEMBLE, logFC, log CPM, PValue for all four uploaded treatments of transcriptomics study."),
+# DATA FORMAT
+
+1. Upload data must be in comma-separated-value (.CSV) file.
+2.	Headers must be true in the uploaded file.
+3.	The first column must be biomarkers (In transcriptomics – Ensembl accession number).
+4.	Column names must be ENSEMBLE ID, log FC, log CPM, P-value for all four uploaded treatments of transcriptomics study.
