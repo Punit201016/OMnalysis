@@ -25,11 +25,14 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 5. The data must be as shown in the data screenshot above.
 
 # UPLOAD DATA
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_1.PNG" height = "600" width = "600">
-1.	The app features can be explored using the", "**Differentially expressed example data tab**", style = "color:white; background-color: black")), "Use the preloaded RNA-seq data of human brain microvascular endothelial cell line induced with four neuroinvasive pathogens (Two virus and two bacteria), capable to cause central nervous system infection. The data is published and can be acessed using", a( "click here", href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6904618/")),
-p("2.	The CSV format expression matrix upto four experimental conditions with expression value (log fold change), a measure of significance (p-value), count of reads (log counts per million) can be uploaded using the", span(strong("Upload Expression data Browse tab.", style = "color:white; background-color: black")), "After uploading you may select from the currently provided species Human, Chicken, Pig and Cow with the help of", span(strong("dropdown select a species tab", style = "color:white; background-color: black")), "to perform further analysis."),
-p("3.	After selection from the species, a user needs to convert the less informative accession number ENSEMBLGENE to more informative biomarkers IDs using the", span(strong("ID conversion tab.", style = "color:white; background-color: black"))),
-p("4.	After mandatory ID conversion of list of genes in expression data,  user needs to click on the", span(strong(" SUBMIT button", style = "color:white; background-color: black")), "to perform the ID conversion. The converted ID data in CSV format can be downloaded using the ", span(strong("Download button.", style = "color:white; background-color: black")))
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_1.PNG" height = "600" width = "500">
+1.  The app features can be explored using the", "**Differentially expressed example data tab**",
+2.  Use the preloaded RNA-seq data of human brain microvascular endothelial cell line induced with four neuroinvasive pathogens (West Nile Virus and Tick-borne encephalitis virus protein E domain DIII and Neisseria meningitidis and its ligand MafA), capable to cause central nervous system infection. The raw data is published and can be acessed using https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8052/?query=wnv and https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6904618/.
+3.  Using **Upload Expression data Browse tab** the CSV file of expression matrix upto four experimental conditions with expression value (log fold change), a measure of significance (p-value), count of reads (log counts per million) can be uploaded. 
+4.  After uploading you may select from the currently provided species Human, Chicken, Pig and Cow with the help of a dropdown **select a species tab** to perform further analysis.
+5.  After selecting the species user needs to convert the less informative ENSEMBLGENE ID to more informative IDs using the **ID conversion tab**.
+6.  After mandatory ID conversion of list of genes in expression data,  user needs to click on the **SUBMIT button** to perform the ID conversion. 
+7.  The result of ID conversion can be downloaded using the **Download button** in CSV format.
 )
 h3("PCA") 
 img(src = "./www/om_2.png", height = 400, width = 600)
