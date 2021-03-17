@@ -21,13 +21,12 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 3.	The first column must be biomarkers (In transcriptomics – Ensembl accession number).
 4.	Column names must be ENSEMBLE ID, log FC, log CPM, P-value for all four uploaded treatments of transcriptomics study.
 
-img(src = "./www/upload_table.png", height = 150, width = 730),
 ![Input data](https://github.com/Punit201016/OMnalysis/blob/main/www/upload_table.png)
+5. The data must be as shown in the data screenshot above.
 
-p("5.The data must contain expression value with their statistical significance value, as shown in the data screenshot above."))
-h3("UPLOAD DATA")
-img(src = "./www/om_1.png", height = 500, width = 300)
-strong(p("1.	The app features can be explored using the", span(strong("Differentially expressed example data tab.", style = "color:white; background-color: black")), "Use the preloaded RNA-seq data of human brain microvascular endothelial cell line induced with four neuroinvasive pathogens (Two virus and two bacteria), capable to cause central nervous system infection. The data is published and can be acessed using", a( "click here", href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6904618/")),
+# UPLOAD DATA
+![Input data](https://github.com/Punit201016/OMnalysis/blob/main/www/om_1.png)
+1.	The app features can be explored using the", "**Differentially expressed example data tab**", style = "color:white; background-color: black")), "Use the preloaded RNA-seq data of human brain microvascular endothelial cell line induced with four neuroinvasive pathogens (Two virus and two bacteria), capable to cause central nervous system infection. The data is published and can be acessed using", a( "click here", href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6904618/")),
 p("2.	The CSV format expression matrix upto four experimental conditions with expression value (log fold change), a measure of significance (p-value), count of reads (log counts per million) can be uploaded using the", span(strong("Upload Expression data Browse tab.", style = "color:white; background-color: black")), "After uploading you may select from the currently provided species Human, Chicken, Pig and Cow with the help of", span(strong("dropdown select a species tab", style = "color:white; background-color: black")), "to perform further analysis."),
 p("3.	After selection from the species, a user needs to convert the less informative accession number ENSEMBLGENE to more informative biomarkers IDs using the", span(strong("ID conversion tab.", style = "color:white; background-color: black"))),
 p("4.	After mandatory ID conversion of list of genes in expression data,  user needs to click on the", span(strong(" SUBMIT button", style = "color:white; background-color: black")), "to perform the ID conversion. The converted ID data in CSV format can be downloaded using the ", span(strong("Download button.", style = "color:white; background-color: black")))
