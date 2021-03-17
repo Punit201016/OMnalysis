@@ -26,7 +26,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 
 # UPLOAD DATA
 <img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_1.PNG" height = "600" width = "500">
-1.  The app features can be explored using the", **Differentially expressed example data tab**.
+1.  The app features can be explored using the **Differentially expressed example data tab**.
 2.  Use the preloaded RNA-seq data of human brain microvascular endothelial cell line induced with four neuroinvasive pathogens (West Nile Virus and Tick-borne encephalitis virus protein E domain DIII and Neisseria meningitidis and its ligand MafA), capable to cause central nervous system infection. The raw data is published and can be acessed using https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8052/?query=wnv and https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6904618/.
 3.  Using **Upload Expression data Browse tab** the CSV file of expression matrix upto four experimental conditions with expression value (log fold change), a measure of significance (p-value), count of reads (log counts per million) can be uploaded. 
 4.  After uploading you may select from the currently provided species Human, Chicken, Pig and Cow with the help of a dropdown **select a species tab** to perform further analysis.
