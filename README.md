@@ -4,9 +4,9 @@ There are open source R packages such as DeSeq2 and edgeR that are extensively u
 
 ![OMnalysis workflow](https://github.com/Punit201016/OMnalysis/blob/main/www/OMnalysis_1.png)
 
-The app is hosted on shiny.io website:", strong("https://omnalysis.shinyapps.io/OMnalysis/"), a( "click here", href="https://omnalysis.shinyapps.io/OMnalysis/"))
+The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 
-#**Instructions**
+# Instructions
 You can run this app on your desktop after installing R base and R studio.
 Once the environment is ready, install packages required for OMnalysis.
 p("•	Install R shiny supporting packages")
