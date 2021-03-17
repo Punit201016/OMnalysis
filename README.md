@@ -7,14 +7,14 @@ There are open source R packages such as DeSeq2 and edgeR that are extensively u
 The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 
 # Instructions
-You can run this app on your desktop after installing R base and R studio.
-Once the environment is ready, install packages required for OMnalysis.
-p("•	Install R shiny supporting packages")
-h4(code('Install.packages(c("flexdashboard", "dplyr", "shiny", "shinydashboard", "DT", "tidyverse", "shinythemes", "tidyr", "gplots", "tibble", "gridExtra", "RColorBrewer", "slickR", "devtools", "ggbiplot", "factoextra", "ggplot2", "data.table", "VennDiagram", "fields", "wordcloud", "SBGNview", "europepmc"))'))
-p("Install Bioconductor packages using:", code('Install.packages("BiocManager")'))
-h4("then",code('install.packages(c("AnnotationDbi", "Biobase", "BiocFileCache", "BiocGenerics", "BiocParallel", "BiocVersion", "biomaRt", "Biostrings", "clusterProfiler", "DO.db", "DOSE", "EnhancedVolcano", "enrichplot", "fgsea", "GO.db", "GOSemSim", "graph", "graphite", "IRanges", "KEGGgraph", "KEGGREST", "org.Bt.eg.db", "org.Gg.eg.db", "org.Hs.eg.db", "org.Ss.eg.db", "pathview", "qvalue", "reactome.db", "ReactomePA", "Rgraphviz", "S4Vectors", "XVector", "zlibbioc"))'))
-hr()
-h3("DATA FORMAT")
+1. You can run this app on your desktop after installing R base and R studio.
+2. Once the environment is ready, install packages required for OMnalysis.
+3. Install R shiny supporting packages.
+4. install.packages(c("flexdashboard", "dplyr", "shiny", "shinydashboard", "DT", "tidyverse", "shinythemes", "tidyr", "gplots", "tibble", "gridExtra", "RColorBrewer", "slickR", "devtools", "ggbiplot", "factoextra", "ggplot2", "data.table", "VennDiagram", "fields", "wordcloud", "SBGNview", "europepmc"))
+5. Install Bioconductor packages using Install.packages("BiocManager")
+6. install.packages(c("AnnotationDbi", "Biobase", "BiocFileCache", "BiocGenerics", "BiocParallel", "BiocVersion", "biomaRt", "Biostrings", "clusterProfiler", "DO.db", "DOSE", "EnhancedVolcano", "enrichplot", "fgsea", "GO.db", "GOSemSim", "graph", "graphite", "IRanges", "KEGGgraph", "KEGGREST", "org.Bt.eg.db", "org.Gg.eg.db", "org.Hs.eg.db", "org.Ss.eg.db", "pathview", "qvalue", "reactome.db", "ReactomePA", "Rgraphviz", "S4Vectors", "XVector", "zlibbioc"))
+
+DATA FORMAT
 strong(p("
 1. Upload data must be in comma-separated-value (.CSV) file."),
 p("2.	Headers must be true in the uploaded file."),
