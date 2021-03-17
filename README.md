@@ -1,12 +1,14 @@
 # OMnalysis: An intergrated web application to visulaize and analyze differential quantitative data
-OMnalysis is developed using R shiny, flexdashboard and bioconductor packages. This tool targets researchers who are new to RNA-seq technology and often depends on commercial vendors or core faciltiy to sequence and analyze their data. There are open source R packages such as DeSeq2 and edgeR that are extensively used to identify differentially expressed genes from the count data. The filtering of DEGs using FDR value or Fold change value is still the matter of discuss among the scientific community, therefore the young reseachers face difficulty to make actionable insight. OMnalysis uses the list of genes produced from edgeR with count per million normalization, significance value (P-value) and fold change value assigned to each lsit of gene over or under expressed in the treatments. 
+OMnalysis is developed using R shiny, flexdashboard and bioconductor packages. This tool targets researchers who are new to RNA-seq technology and often depends on commercial vendors or core faciltiy to sequence and analyze their data. 
+There are open source R packages such as DeSeq2 and edgeR that are extensively used to identify differentially expressed genes from the count data. The filtering of DEGs using FDR value or Fold change value is still the matter of discuss among the scientific community, therefore the young reseachers face difficulty to make actionable insight. OMnalysis uses the list of genes produced from edgeR with count per million normalization, significance value (P-value) and fold change value assigned to each lsit of gene over or under expressed in the treatments. 
 
 ![OMnalysis workflow](https://github.com/Punit201016/OMnalysis/blob/main/www/OMnalysis_1.png)
-h3("INSTRUCTIONS")
-p("•	The app is hosted on shiny.io website:", strong("https://omnalysis.shinyapps.io/OMnalysis/"), a( "click here", href="https://omnalysis.shinyapps.io/OMnalysis/"))
-p("•	Codes are freely available at Github:", strong("https://github.com/Punit201016/OMnalysis"), a("click here", href="https://github.com/Punit201016/OMnalysis"))
-p("•	You can run this app on your desktop after installing R base and R studio.")
-p("•	Once the environment is ready, install packages required for OMnalysis.")
+
+The app is hosted on shiny.io website:", strong("https://omnalysis.shinyapps.io/OMnalysis/"), a( "click here", href="https://omnalysis.shinyapps.io/OMnalysis/"))
+
+#**Instructions**
+You can run this app on your desktop after installing R base and R studio.
+Once the environment is ready, install packages required for OMnalysis.
 p("•	Install R shiny supporting packages")
 h4(code('Install.packages(c("flexdashboard", "dplyr", "shiny", "shinydashboard", "DT", "tidyverse", "shinythemes", "tidyr", "gplots", "tibble", "gridExtra", "RColorBrewer", "slickR", "devtools", "ggbiplot", "factoextra", "ggplot2", "data.table", "VennDiagram", "fields", "wordcloud", "SBGNview", "europepmc"))'))
 p("Install Bioconductor packages using:", code('Install.packages("BiocManager")'))
