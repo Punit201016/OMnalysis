@@ -25,7 +25,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 5. The data must be as shown in the data screenshot above.
 
 # UPLOAD DATA
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_2.png" height = "400" width = "600">
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_2.PNG" height = "400" width = "600">
 1.	The app features can be explored using the", "**Differentially expressed example data tab**", style = "color:white; background-color: black")), "Use the preloaded RNA-seq data of human brain microvascular endothelial cell line induced with four neuroinvasive pathogens (Two virus and two bacteria), capable to cause central nervous system infection. The data is published and can be acessed using", a( "click here", href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6904618/")),
 p("2.	The CSV format expression matrix upto four experimental conditions with expression value (log fold change), a measure of significance (p-value), count of reads (log counts per million) can be uploaded using the", span(strong("Upload Expression data Browse tab.", style = "color:white; background-color: black")), "After uploading you may select from the currently provided species Human, Chicken, Pig and Cow with the help of", span(strong("dropdown select a species tab", style = "color:white; background-color: black")), "to perform further analysis."),
 p("3.	After selection from the species, a user needs to convert the less informative accession number ENSEMBLGENE to more informative biomarkers IDs using the", span(strong("ID conversion tab.", style = "color:white; background-color: black"))),
