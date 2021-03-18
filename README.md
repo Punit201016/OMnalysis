@@ -110,7 +110,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 11.	These Pathway enrichment result can also be downloaded in **CSV format by clicking on treatment checkbox and Download button**.
 
 # Enriched pathway visualization
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_8.PNG" height = "400" width = "1200"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_8.PNG" height = "300" width = "1200"> </img>
 1.	After selecting the single and same pathway in all the treatments from the pathway enrichment result table, you can visualize the pathway using **pathway visualization tabs and according to the pathway enrichment method performed earlier.**
 2.	**Three options are  available Pathway ORA, Pathway GSEA, ReactomePA**. You can select any one of them and view the output on the right side **subtabs panel of ORA pathway output or GSEA pathway output or Reactome pathway output.**
 3.	If the previous pathway enrichment analysis was ORA then only ORA pathway will be visualized in the ORA pathway output subtab, if not, it will show an error.
@@ -122,7 +122,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 8.	Keep in mind that the visualization of pathways depends on the **pathway enrichment analysis method and selection of the same pathway in all treatments.**
 9.	On the **left bottom, Download tab** is provided to download the **pathway image of ORA, GSEA and ReactomePA output in PNG image format**."))
 # Literature info
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_9.PNG" height = "250" width = "1100"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_9.PNG" height = "250" width = "1300"> </img>
 1.	This section provides the option to retrieve the information from the Europe PMC by providing biomarkers id, species, disease, cell or tissue type in the **text input tab provided below Literature search header.**
 2.	The Literature retrieval limit has an input option to provided number that will decide the fetching of the literatures.
 3.	Once the literature search and retrieval limit is provided, you can **proceed with the submit button to perform the retrieval of scientific literature.**
