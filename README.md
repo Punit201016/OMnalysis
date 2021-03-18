@@ -95,7 +95,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 13.	The generated word cloud diagram can be **downloaded using the Download button.**
 14.	After examining the annotation using GO enrichment analysis, you may proceed to **pathway enrichment analysis**.
 
-**Pathway enrichment analysis**
+# Pathway enrichment analysis
 <img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_7.PNG" height = "600" width = "800"> </img>
 1.	This section provides the databases and methods available to perform pathway analysis.
 2.	The options provided are **over-represented analysis (ORA), (based on hypergeometric test), gene set enrichment analysis (GSEA), (based on the Kolmogorov Smirnov test), network topology analysis (NTA), ( uses genes, their expression value, and network arrangements (edges and nodes), Reactome pathway analysis uses Reactome database to perform pathway analysis.**
