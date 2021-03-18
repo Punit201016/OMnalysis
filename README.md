@@ -120,7 +120,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 7. The output from the reactome pathway analysis can be intrepret using the below notation image.
 <img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_10.PNG" height = "700" width = "800"> </img>
 8.	Keep in mind that the visualization of pathways depends on the **pathway enrichment analysis method and selection of the same pathway in all treatments.**
-9.	On the **left bottom, Download tab** is provided to download the **pathway image of ORA, GSEA and ReactomePA output in PNG image format**."))
+9.	On the **left bottom, Download tab** is provided to download the **pathway image of ORA, GSEA and ReactomePA output in PNG image format**.
 # Literature info
 <img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_9.PNG" height = "250" width = "1300"> </img>
 1.	This section provides the option to retrieve the information from the Europe PMC by providing biomarkers id, species, disease, cell or tissue type in the **text input tab provided below Literature search header.**
