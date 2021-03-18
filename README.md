@@ -36,7 +36,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 7.  The result of ID conversion can be downloaded using the **Download button** in CSV format.
 
 # PCA
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_2.PNG" height = "500" width = "600"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_2.PNG" height = "500" width = "700"> </img>
 1.	Principal component analysis (PCA) is an unsupervised dimension reduction method that allows us to understand the relationships among the attributes of expression data. PCA analysis calculates the principal components using the Euclidean distance and linear transformation of the expression data. It calculates the most significant variable in the provided data to calculates first principal component (PC1), second principal component(PC2) and so on.
 2.	Two types of PCA plots are provided, first  is **variable PCA plot** that provides information about the direction and relationship among the variables (treatments) and second is **Biplot PCA** that visualize the features of variable PCA plot and observation (genes) of a specific variable in single plot.
 3.	Most of the variables are explained in PC1 and PC2, however, **only for Biplot PCA drop-down tab** is available to **explore and compare the other available PCs**.
