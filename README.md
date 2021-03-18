@@ -79,7 +79,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 8.	These gene ontology result can be downloaded in CSV format by **clicking on treatment checkbox and Download button**.
 
 # GO heatmaps
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_6.PNG" height = "600" width = "800"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_6.PNG" height = "700" width = "800"> </img>
 1.	GO heatmaps are the expression values of genes that mapped to the biological term while performing gene ontology enrichment analysis.
 2.	It is mandatory to **select at least two similar enriched GO terms from the previous tabular output of GO enrichment analysis of two treatments.**
 3.	Two options are available **checkbox ORA and GSEA heatmap visualization to generate the heatmap**, however, the output heatmap depends on the previous **GO enrichment analysis method.**
