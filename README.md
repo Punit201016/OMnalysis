@@ -72,54 +72,57 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 1.	Use the **ontology classes checkbox** to perform the categorical analysis of your expression data, either in the biological process (multiple molecular activities integrates to perform a process) or molecular function (activities at the molecular level by gene product) or cellular component (site of function concerning cellular structure).
 2. 	**P-value cutoff** and the **q-value cutoff** are provided to obtain enriched test and significantly enriched test, respectively. The default p-value and q-value cutoff is 0 and can be adjusted to 0.01 and 0.05.
 3.	The methods provided to perform **gene ontology enrichment analysis** are **over-represented analysis (ORA)**, (based on hypergeometric test and mapping of genes to the annotated biological vocabulary) and **gene set enrichment analysis** (GSEA), (based on the Kolmogorov Smirnov test and consider gene set with their log fold change value).
-4.	The gene ontology analysis main panel is populated with **subtabs Ontology result-1, Ontology result-2, Ontology result-3, and  Ontology result-4** each subtab shows the output result of the analysis."),
-p("5.	After providing the necessary inputs click on the ", span(strong("Go button ", style = "color:white; background-color: black")),"to launch the enrichment analysis. Please keep in mind that in each treatment ontology enrichment analysis the same input values will be used."),
-p("6.	In the drop-down ", span(strong("pAadjust method tab,", style = "color:white; background-color: black")),"  7 adjustment methods Holm, Hochberg, Hommel,  Bonferroni,  Benjamini and Hochberg (BH),  Benjamini and Yekutieli (BY), FDR and none are provided to control false postive result. Above mentioned first four methods control the family-wise error rate (probability of making one or more false discoveries) and remaining methods control the expected proportion of discoveries that are rejected falsely (FDR). We suggest FDR correction methods for a more reliable result."),
-p("7.	From the ontology result table, you need to provide one go term by selecting only one row and same term in all the treatments. This information will be used for the visualization of heatmaps in the next GO heatmaps panel."),
-p("8.	These gene ontology result can be downloaded in CSV format by clicking on ", span(strong("treatment checkbox and Download button.", style = "color:white; background-color: black")))
-) 
-h3("GO heatmaps")
-img(src = "./www/om_6.png", height = 600, width = 700)
-strong(p("1.	GO heatmaps are the expression values of genes that mapped to the biological term while performing gene ontology enrichment analysis."),
-p("2.	It is mandatory to select at least two similar enriched GO terms from the previous tabular output of GO enrichment analysis of two treatments. "),
-p("3.	Two options are available ", span(strong("checkbox ORA and GSEA heatmap visualization", style = "color:white; background-color: black"))," (to generate the heatmap, however, the output depends on the previous GO enrichment analysis method."),
-p("4.	With the help of ", span(strong("checkbox button treatments 1, 2, 3 and 4", style = "color:white; background-color: black")),"user can visualize the heatmap and a word cloud of the selected treatment. It is mandatory to select at least two treatments to generate the heatmap."), 
-p("5.	To adjust the ", span(strong("column, row text and col key size three numerical tabs", style = "color:white; background-color: black")),"are available and the default value for column text, row text and colour key size is 1.2, 1.2 and 0.04 respectively."), 
-p("6.	User can provide text input to assign a ", span(strong("title for heatmap.", style = "color:white; background-color: black"))),
-p("7.	The heatmap and word cloud can be downloadable in four supporting image formats jpeg, png, pdf and tiff using the ", span(strong("drop-down format option.", style = "color:white; background-color: black"))),
-p("8.	The dimension and the resolution of output heatmap and word cloud can be adjusted with the help of ", span(strong("numerical input in tabs plot width, plot height and plot resolution.", style = "color:white; background-color: black"))," The default value is 20, 20 and 300 for width, height and resolution respectively."), 
-p("9.	After providing the necessary information user can download the generated heatmap using the ", span(strong("Download button.", style = "color:white; background-color: black"))),
-p("10.	Word cloud in GO heatmaps shows the enriched GO texts that have the highest to lowest number of genes mapped to it."),
-p("11.	With the help of ", span(strong("word cloud checkbox", style = "color:white; background-color: black")),"user can generate the word cloud of selected treatment and type of enrichment method used."),
-p("12.	Using the ", span(strong("max words numeric input tab", style = "color:white; background-color: black")),"  option user can increase or decrease the number of enriched go terms visualization in the word cloud. The default value of the maximum words in the word cloud in 100."),
-p("13.	The generated word cloud diagram can be downloaded using the ", span(strong("Download button.", style = "color:white; background-color: black"))),
-p("14.	After examining the annotation using GO enrichment analysis, you may proceed to pathway enrichment analysis."))
-h3("Pathway enrichment analysis")
-img(src = "./www/om_7.png", height = 500, width = 750)
-strong(p("1.	This section provides the databases and methods available to perform pathway analysis."),
-p("2.	The options provided are over-represented analysis (ORA), (based on hypergeometric test), gene set enrichment analysis (GSEA), (based on the Kolmogorov Smirnov test), network topology analysis (NTA), ( uses genes, their expression value, and network arrangements (edges and nodes), Reactome pathway analysis uses Reactome database to perform pathway analysis."),
-p("3.	The default p-value cutoff is 0 and can be adjusted to get significant result, however, 0.05 p-value cutoff can be used as it is applied in the first filter to discard the non-significant gene set and then by removing false positives result by applying pAdjust mehtod. This stringency may result in a fewer number of gene set ranked."),
-p("4.	In enrichment analysis, gene sets are compared multiple times to the universal datasets and in each run it increases the chances of a false positive result, to overcome this problem multiple adjustment methods are provided."), 
-p("5.	In the ", span(strong("drop-down pAadjust method tab,", style = "color:white; background-color: black")),"  7 adjustment methods Holm, Hochberg, Hommel,  Bonferroni,  Benjamini and Hochberg (BH),  Benjamini and Yekutieli (BY), FDR and to bypass these methods none is available. Above mentioned first four methods control the family-wise error rate (probability of making one or more false discoveries) and remaining methods control the expected proportion of discoveries that are rejected falsely (FDR). We suggest FDR correction methods for a more reliable result."),
-p("6.	To support NTA four database are provided, biocarta (protein sets participating in the pathway), panther (a curated and comprehensive database to classify protein and their genes through evolutionary relationship), NCI-Nature Pathway Interaction Database (Signaling pathways composed of human biomolecular interactions and cellular processes) and pharmgkb (a comprehensive resource that provides information about how human genetic variation affects the response to medications)."),
-p("7.	After providing the inputs, click on the ", span(strong("Go tab", style = "color:white; background-color: black"))," to launch the pathway enrichment analysis. Please keep in mind that in each treatment, the same set of information will be used to execute pathway enrichment analysis. "), 
-p("8.	To perform pathway enrichment analysis in all treatments you don’t need to click and provide input each time, instead, you can click on the ", span(strong("subtabs Pathway result-2, Pathway result-3, and Pathway result-4", style = "color:white; background-color: black"))," to execute analysis."),
-p("9.	Pathway enrichment analysis section has ", span(strong("subtabs, Pathway result-1, Pathway result-2, Pathway result-3, and Pathway result-4.", style = "color:white; background-color: black"))," Once the analysis completed a table of enrichment pathways will be displayed in the pathway subtabs."),
-p("10.	From the pathway analysis result table, you need to select one same enriched pathway by selecting only one row in all treatments. This information will be used for the visualization of the expressed gene in the next section enriched pathway visualization."),
-p("11.	These Pathway enrichment result can also be downloaded in CSV format by", span(strong("clicking on treatment checkbox and Download button.", style = "color:white; background-color: black"))))
-h3("Enriched pathway Visualization")
-img(src = "./www/om_8.png", height = 250, width = 750)
-strong(p("1.	After selecting the single and same pathway in all the treatments from the pathway enrichment result table, you can visualize the pathway using ", span(strong("pathway visualization tabs.", style = "color:white; background-color: black")), "and according to the pathway enrichment method performed earlier."),
-p("2.	Three options are  available Pathway ORA, Pathway GSEA, ReactomePA. You can select any one of them and view the output on the right side ", span(strong("subtabs panel of ORA pathway output or GSEA pathway output or Reactome pathway output.", style = "color:white; background-color: black"))),
-p("3.	If the previous pathway enrichment analysis was ORA then only ORA pathway will be visualized in the ORA pathway output subtab, if not, it will show an error."),
-p("4.	Once you are on the ORA, GSEA or  pathway output, you can visualize genes set of four treatments with their log fold change value. The colour code can be changed using three tabs,", span(strong(" highly expressed (High), medium expressed (Medium) and lowly expressed genes (Low).", style = "color:white; background-color: black"))),
-p("5.	The default colour code for high is green, for medium grey and low in red. You can select more colour combination from the none, red, green, yellow, blue, and grey to visualize the expression values on enriched pathway."),
-p("6.	Once you have selected the colour code, you need to select among the treatments provided under the header ", span(strong("Treatments uploaded", style = "color:white; background-color: black")),"that you desire to visualize on the enriched pathway."),
-p("7. The output from the reactome pathway analysis can be intrepret using the below notation image."),
-img(src = "./www/om_10.png", height = 500, width = 750),
-p("8.	Keep in mind that the visualization of pathways depends on the pathway enrichment analysis method and selection of the same pathway in all treatments."),
-p("9.	On the left bottom, ", span(strong("Download tab", style = "color:white; background-color: black"))," is provided to download the pathway image of ORA, GSEA and ReactomePA output in PNG image format."))
-h3("Literature info")
+4.	The gene ontology analysis main panel is populated with **subtabs Ontology result-1, Ontology result-2, Ontology result-3, and  Ontology result-4** each subtab shows the output result of the analysis.
+5.	After providing the necessary inputs click on the **Go button** it launch the enrichment analysis. Please keep in mind that the same input values will be used for all treatments.
+6.	In the **drop-down pAadjust method tab** 7 adjustment methods Holm, Hochberg, Hommel,  Bonferroni,  Benjamini and Hochberg (BH),  Benjamini and Yekutieli (BY), FDR and none are provided to control false postive result. Above mentioned first four methods control the family-wise error rate (probability of making one or more false discoveries) and      remaining methods control the expected proportion of discoveries that are rejected falsely (FDR). We suggest FDR correction methods for a more reliable result.
+7.	From the ontology result table, you need to provide one go term by selecting only one row and same GO term in all the treatments. This information will be used for the           visualization of heatmaps in the next **GO heatmaps panel**.
+8.	These gene ontology result can be downloaded in CSV format by **clicking on treatment checkbox and Download button**.
+
+# GO heatmaps
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_6.PNG" height = "600" width = "500"> </img>
+1.	GO heatmaps are the expression values of genes that mapped to the biological term while performing gene ontology enrichment analysis.
+2.	It is mandatory to **select at least two similar enriched GO terms from the previous tabular output of GO enrichment analysis of two treatments.**
+3.	Two options are available **checkbox ORA and GSEA heatmap visualization to generate the heatmap**, however, the output heatmap depends on the previous **GO enrichment analysis method.**
+4.	With the help of **checkbox button treatments 1, 2, 3 and 4** you can **visualize the heatmap and a word cloud of the selected treatment**. It is mandatory to select **at least two treatments to generate the heatmap.**
+5.	To adjust the **column, row text and col key size three numerical tabs are available** and the default value for **column text, row text and colour key size is 1.2, 1.2 and 0.04** respectively.
+6.	You can provide **text input to assign a title for heatmap**.
+7.	The **heatmap and word cloud** can be **downloadable in four supporting image formats jpeg, png, pdf and tiff** using the **drop-down format option**.
+8.	The **dimension and the resolution of output heatmap and word cloud** can be adjusted with the help of **numerical input in tabs plot width, plot height and plot resolution**. The default value is 20, 20 and 300 for width, height and resolution respectively.
+9.	After providing the necessary information user can **download the generated heatmap using the Download button.**
+10.	Word cloud in GO heatmaps shows the **enriched GO texts** that have the highest to lowest number of genes mapped to it.
+11.	With the help of **word cloud checkbox** user can generate the word cloud of **selected treatment and type of enrichment method used.**
+12.	Using the **max words numeric input tab option** you can increase or decrease the number of enriched go terms visualization in the word cloud. The default value of the maximum words in the word cloud in 100.
+13.	The generated word cloud diagram can be **downloaded using the Download button.**
+14.	After examining the annotation using GO enrichment analysis, you may proceed to **pathway enrichment analysis**.
+
+**Pathway enrichment analysis**
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_7.PNG" height = "600" width = "500"> </img>
+1.	This section provides the databases and methods available to perform pathway analysis.
+2.	The options provided are **over-represented analysis (ORA), (based on hypergeometric test), gene set enrichment analysis (GSEA), (based on the Kolmogorov Smirnov test), network topology analysis (NTA), ( uses genes, their expression value, and network arrangements (edges and nodes), Reactome pathway analysis uses Reactome database to perform pathway analysis.**
+3.	The **default p-value cutoff is 0** and can be adjusted to get significant result, however, 0.05 p-value cutoff can be used as it is applied in the first filter to discard the non-significant gene set and then by removing **false positives result by applying pAdjust mehtod**. This stringency may result in a fewer number of gene set ranked.
+4.	In enrichment analysis, gene sets are compared multiple times to the universal datasets and in each run it increases the chances of a false positive result, to overcome this problem multiple adjustment methods are provided.
+5.	In the **drop-down pAadjust method tab** 7 adjustment methods Holm, Hochberg, Hommel,  Bonferroni,  Benjamini and Hochberg (BH),  Benjamini and Yekutieli (BY), FDR and to bypass these methods none is available. Above mentioned first four methods control the family-wise error rate (probability of making one or more false discoveries) and remaining methods control the expected proportion of discoveries that are rejected falsely (FDR). We suggest FDR correction methods for a more reliable result.
+6. To support **NTA four database** are provided, **biocarta (protein sets participating in the pathway), panther (a curated and comprehensive database to classify protein and their genes through evolutionary relationship), NCI-Nature Pathway Interaction Database (Signaling pathways composed of human biomolecular interactions and cellular processes) and pharmgkb (a comprehensive resource that provides information about how human genetic variation affects the response to medications).**
+7.	After providing the inputs, **click on the Go tab to launch the pathway enrichment analysis.** Please keep in mind that in each treatment, the same set of information will be used to **execute pathway enrichment analysis**. 
+8.  To **perform pathway enrichment analysis in all treatments** you don’t need to click and provide input each time, instead, you can click on the **subtabs Pathway result-2, Pathway result-3, and Pathway result-4" to execute analysis.**
+9.	Pathway enrichment analysis section has **subtabs, Pathway result-1, Pathway result-2, Pathway result-3, and Pathway result-4.** Once the analysis completed a table of enrichment pathways will be displayed in the pathway subtabs.
+10.	From the pathway analysis result table, you need to **select one same enriched pathway by selecting only one row in all treatments**. This information will be used for the visualization of the expressed gene in the next section enriched pathway visualization.
+11.	These Pathway enrichment result can also be downloaded in **CSV format by clicking on treatment checkbox and Download button**.
+
+# Enriched pathway Visualization
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_8.PNG" height = "600" width = "500"> </img>
+1.	After selecting the single and same pathway in all the treatments from the pathway enrichment result table, you can visualize the pathway using **pathway visualization tabs and according to the pathway enrichment method performed earlier.**
+2.	**Three options are  available Pathway ORA, Pathway GSEA, ReactomePA**. You can select any one of them and view the output on the right side **subtabs panel of ORA pathway output or GSEA pathway output or Reactome pathway output.**
+3.	If the previous pathway enrichment analysis was ORA then only ORA pathway will be visualized in the ORA pathway output subtab, if not, it will show an error.
+4.	Once you are on the ORA, GSEA or  pathway output, you can visualize genes set of four treatments with their log fold change value. The colour code can be changed using **three tabs highly expressed (High), medium expressed (Medium) and lowly expressed genes (Low)**
+5.	The default colour code for high is green, for medium grey and low in red. You can **select more colour combination from the none, red, green, yellow, blue, and grey to visualize the expression values on enriched pathway.**
+6.	Once you have selected the colour code, select among the treatments provided under the **header Treatments uploaded that you desire to visualize on the enriched pathway.**
+7. The output from the reactome pathway analysis can be intrepret using the below notation image.
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_10.PNG" height = "600" width = "500"> </img>
+8.	Keep in mind that the visualization of pathways depends on the **pathway enrichment analysis method and selection of the same pathway in all treatments.**
+9.	On the **left bottom, Download tab** is provided to download the **pathway image of ORA, GSEA and ReactomePA output in PNG image format**."))
+# Literature info
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_10.PNG" height = "600" width = "500"> </img>
 img(src = "./www/om_9.png", height = 200, width = 980)
 strong(p("1.	This section provides the option to retrieve the information from the Europe PMC by providing biomarkers id, species, disease, cell or tissue type in the text input tab provided below ", span(strong("Literature search header.", style = "color:white; background-color: black"))),
 p("2.	The Literature retrieval limit has an input option to provided number that will decide the fetching of the literatures in number."),
