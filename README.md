@@ -110,7 +110,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 11.	These Pathway enrichment result can also be downloaded in **CSV format by clicking on treatment checkbox and Download button**.
 
 # Enriched pathway visualization
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_8.PNG" height = "600" width = "800"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_8.PNG" height = "600" width = "1000"> </img>
 1.	After selecting the single and same pathway in all the treatments from the pathway enrichment result table, you can visualize the pathway using **pathway visualization tabs and according to the pathway enrichment method performed earlier.**
 2.	**Three options are  available Pathway ORA, Pathway GSEA, ReactomePA**. You can select any one of them and view the output on the right side **subtabs panel of ORA pathway output or GSEA pathway output or Reactome pathway output.**
 3.	If the previous pathway enrichment analysis was ORA then only ORA pathway will be visualized in the ORA pathway output subtab, if not, it will show an error.
