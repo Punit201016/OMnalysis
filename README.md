@@ -118,7 +118,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 5.	The default colour code for high is green, for medium grey and low in red. You can **select more colour combination from the none, red, green, yellow, blue, and grey to visualize the expression values on enriched pathway.**
 6.	Once you have selected the colour code, select among the treatments provided under the **header Treatments uploaded that you desire to visualize on the enriched pathway.**
 7. The output from the reactome pathway analysis can be intrepret using the below notation image.
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_10.PNG" height = "600" width = "500"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_9.PNG" height = "600" width = "500"> </img>
 8.	Keep in mind that the visualization of pathways depends on the **pathway enrichment analysis method and selection of the same pathway in all treatments.**
 9.	On the **left bottom, Download tab** is provided to download the **pathway image of ORA, GSEA and ReactomePA output in PNG image format**."))
 # Literature info
