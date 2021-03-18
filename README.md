@@ -68,7 +68,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 9.	The generated diagram can be downloaded using the **Download button.**
 
 # Gene ontology (GO) enrichment analysis
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_5.PNG" height = "600" width = "700"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_5.PNG" height = "500" width = "800"> </img>
 1.	Use the **ontology classes checkbox** to perform the categorical analysis of your expression data, either in the biological process (multiple molecular activities integrates to perform a process) or molecular function (activities at the molecular level by gene product) or cellular component (site of function concerning cellular structure).
 2. 	**P-value cutoff** and the **q-value cutoff** are provided to obtain enriched test and significantly enriched test, respectively. The default p-value and q-value cutoff is 0 and can be adjusted to 0.01 and 0.05.
 3.	The methods provided to perform **gene ontology enrichment analysis** are **over-represented analysis (ORA)**, (based on hypergeometric test and mapping of genes to the annotated biological vocabulary) and **gene set enrichment analysis** (GSEA), (based on the Kolmogorov Smirnov test and consider gene set with their log fold change value).
