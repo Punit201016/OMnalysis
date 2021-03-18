@@ -56,7 +56,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 8.	After providing all the necessary information user can download the plots with the help of **Download button**.
 
 # Statistical filtering
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_4.PNG" height = "600" width = "500"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_4.PNG" height = "600" width = "600"> </img>
 1.	With the help of **checkbox button treatments 1, 2, 3 and 4** you can visualize the data and plot of the selected treatment.
 2.  **Three numerical input boxes** are provided to filter out the genes that are unable to cross the threshold values. Three statistical parameters are log counts per million (expression value), log fold change (magnitude of change) and P-value (value of significance) provided to obtain significantly differentially expressed genes.
 3.	Use the **Venn diagram checkbox** to visualize the common significantly DEGs in the uploaded treatments. Also, you can use a Venn diagram to obtain common or different up and down-regulated genes in two group of treatments.
