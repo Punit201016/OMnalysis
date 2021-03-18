@@ -96,7 +96,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 14.	After examining the annotation using GO enrichment analysis, you may proceed to **pathway enrichment analysis**.
 
 # Pathway enrichment analysis
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_7.PNG" height = "600" width = "800"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_7.PNG" height = "600" width = "900"> </img>
 1.	This section provides the databases and methods available to perform pathway analysis.
 2.	The options provided are **over-represented analysis (ORA), (based on hypergeometric test), gene set enrichment analysis (GSEA), (based on the Kolmogorov Smirnov test), network topology analysis (NTA), ( uses genes, their expression value, and network arrangements (edges and nodes), Reactome pathway analysis uses Reactome database to perform pathway analysis.**
 3.	The **default p-value cutoff is 0** and can be adjusted to get significant result, however, 0.05 p-value cutoff can be used as it is applied in the first filter to discard the non-significant gene set and then by removing **false positives result by applying pAdjust mehtod**. This stringency may result in a fewer number of gene set ranked.
