@@ -56,7 +56,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 8.	After providing all the necessary information user can download the plots with the help of **Download button**.
 
 # Statistical filtering
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_4.PNG" height = "600" width = "700"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_4.PNG" height = "700" width = "700"> </img>
 1.	With the help of **checkbox button treatments 1, 2, 3 and 4** you can visualize the data and plot of the selected treatment.
 2.  **Three numerical input boxes** are provided to filter out the genes that are unable to cross the threshold values. Three statistical parameters are log counts per million (expression value), log fold change (magnitude of change) and P-value (value of significance) provided to obtain significantly differentially expressed genes.
 3.	Use the **Venn diagram checkbox** to visualize the common significantly DEGs in the uploaded treatments. Also, you can use a Venn diagram to obtain common or different up and down-regulated genes in two group of treatments.
@@ -110,7 +110,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 11.	These Pathway enrichment result can also be downloaded in **CSV format by clicking on treatment checkbox and Download button**.
 
 # Enriched pathway visualization
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_8.PNG" height = "400" width = "900"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_8.PNG" height = "600" width = "800"> </img>
 1.	After selecting the single and same pathway in all the treatments from the pathway enrichment result table, you can visualize the pathway using **pathway visualization tabs and according to the pathway enrichment method performed earlier.**
 2.	**Three options are  available Pathway ORA, Pathway GSEA, ReactomePA**. You can select any one of them and view the output on the right side **subtabs panel of ORA pathway output or GSEA pathway output or Reactome pathway output.**
 3.	If the previous pathway enrichment analysis was ORA then only ORA pathway will be visualized in the ORA pathway output subtab, if not, it will show an error.
@@ -118,11 +118,11 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 5.	The default colour code for high is green, for medium grey and low in red. You can **select more colour combination from the none, red, green, yellow, blue, and grey to visualize the expression values on enriched pathway.**
 6.	Once you have selected the colour code, select among the treatments provided under the **header Treatments uploaded that you desire to visualize on the enriched pathway.**
 7. The output from the reactome pathway analysis can be intrepret using the below notation image.
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_10.PNG" height = "600" width = "800"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_10.PNG" height = "700" width = "800"> </img>
 8.	Keep in mind that the visualization of pathways depends on the **pathway enrichment analysis method and selection of the same pathway in all treatments.**
 9.	On the **left bottom, Download tab** is provided to download the **pathway image of ORA, GSEA and ReactomePA output in PNG image format**."))
 # Literature info
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_9.PNG" height = "600" width = "800"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_9.PNG" height = "500" width = "900"> </img>
 img(src = "./www/om_9.png", height = 200, width = 980)
 strong(p("1.	This section provides the option to retrieve the information from the Europe PMC by providing biomarkers id, species, disease, cell or tissue type in the text input tab provided below ", span(strong("Literature search header.", style = "color:white; background-color: black"))),
 p("2.	The Literature retrieval limit has an input option to provided number that will decide the fetching of the literatures in number."),
