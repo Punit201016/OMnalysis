@@ -79,7 +79,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 8.	These gene ontology result can be downloaded in CSV format by **clicking on treatment checkbox and Download button**.
 
 # GO heatmaps
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_6.PNG" height = "600" width = "500"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_6.PNG" height = "600" width = "800"> </img>
 1.	GO heatmaps are the expression values of genes that mapped to the biological term while performing gene ontology enrichment analysis.
 2.	It is mandatory to **select at least two similar enriched GO terms from the previous tabular output of GO enrichment analysis of two treatments.**
 3.	Two options are available **checkbox ORA and GSEA heatmap visualization to generate the heatmap**, however, the output heatmap depends on the previous **GO enrichment analysis method.**
@@ -96,7 +96,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 14.	After examining the annotation using GO enrichment analysis, you may proceed to **pathway enrichment analysis**.
 
 **Pathway enrichment analysis**
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_7.PNG" height = "600" width = "500"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_7.PNG" height = "600" width = "800"> </img>
 1.	This section provides the databases and methods available to perform pathway analysis.
 2.	The options provided are **over-represented analysis (ORA), (based on hypergeometric test), gene set enrichment analysis (GSEA), (based on the Kolmogorov Smirnov test), network topology analysis (NTA), ( uses genes, their expression value, and network arrangements (edges and nodes), Reactome pathway analysis uses Reactome database to perform pathway analysis.**
 3.	The **default p-value cutoff is 0** and can be adjusted to get significant result, however, 0.05 p-value cutoff can be used as it is applied in the first filter to discard the non-significant gene set and then by removing **false positives result by applying pAdjust mehtod**. This stringency may result in a fewer number of gene set ranked.
@@ -110,7 +110,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 11.	These Pathway enrichment result can also be downloaded in **CSV format by clicking on treatment checkbox and Download button**.
 
 # Enriched pathway Visualization
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_8.PNG" height = "600" width = "500"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_8.PNG" height = "600" width = "800"> </img>
 1.	After selecting the single and same pathway in all the treatments from the pathway enrichment result table, you can visualize the pathway using **pathway visualization tabs and according to the pathway enrichment method performed earlier.**
 2.	**Three options are  available Pathway ORA, Pathway GSEA, ReactomePA**. You can select any one of them and view the output on the right side **subtabs panel of ORA pathway output or GSEA pathway output or Reactome pathway output.**
 3.	If the previous pathway enrichment analysis was ORA then only ORA pathway will be visualized in the ORA pathway output subtab, if not, it will show an error.
@@ -118,11 +118,11 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 5.	The default colour code for high is green, for medium grey and low in red. You can **select more colour combination from the none, red, green, yellow, blue, and grey to visualize the expression values on enriched pathway.**
 6.	Once you have selected the colour code, select among the treatments provided under the **header Treatments uploaded that you desire to visualize on the enriched pathway.**
 7. The output from the reactome pathway analysis can be intrepret using the below notation image.
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_9.PNG" height = "600" width = "500"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_10.PNG" height = "600" width = "800"> </img>
 8.	Keep in mind that the visualization of pathways depends on the **pathway enrichment analysis method and selection of the same pathway in all treatments.**
 9.	On the **left bottom, Download tab** is provided to download the **pathway image of ORA, GSEA and ReactomePA output in PNG image format**."))
 # Literature info
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_10.PNG" height = "600" width = "500"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_9.PNG" height = "600" width = "800"> </img>
 img(src = "./www/om_9.png", height = 200, width = 980)
 strong(p("1.	This section provides the option to retrieve the information from the Europe PMC by providing biomarkers id, species, disease, cell or tissue type in the text input tab provided below ", span(strong("Literature search header.", style = "color:white; background-color: black"))),
 p("2.	The Literature retrieval limit has an input option to provided number that will decide the fetching of the literatures in number."),
