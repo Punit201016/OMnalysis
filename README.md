@@ -44,7 +44,7 @@ The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 5.	The **dimension and the resolution of output PCA plot** can be adjusted with the help of **numerical input tabs**. The default value are 20, 20 and 300 for width, height and resolution respectively.
 6. After providing all the necessary information you can download the **PCA plot using Download button.**
 # Plots
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.PNG" height = "600" width = "600"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.PNG" height = "500" width = "700"> </img>
 1.	Scatter plot uses log fold change versus log counts per million to visualize your expression data in the form of up and down-regulated genes. Each dot in the scatter plot represents up-regulated genes (green colour),  non-significant genes (black colour) and downregulated genes (red colour).
 
 2.	The **slider input option** is available for the user to provide the **numeric input P-value cutoff** for both plots and **FC-cutoff for volcano plot** required to generate plots. The default numeric P-value cutoff is 0.02 and FC-cutoff is 1.2.
