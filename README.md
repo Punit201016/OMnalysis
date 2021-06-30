@@ -66,45 +66,46 @@ uploaded treatments of transcriptomics study.
 2.	Two types of PCA plots are provided, first is _**Variable PCA**_ plot that provides information about the direction and relationship among the variables (treatments) and second is **_Biplot PCA_** that visualize the features of variable PCA plot and observation (genes or proteins) of each treatment in single plot.
 3.	Press _**Variable PCA**_ or **_Biplot PCA_** to generate transcriptomics variable PCA plot, biplot PCA plot in **_Plot visualization_** window. 
 4.	Press Variable PCA or Biplot PCA to generate proteomics variable PCA plot, biplot PCA plot in Plot visualization Proteomic window.
-5.	Most of the variables are explained in PC1 and PC2, however, to compare principal components, Select PC from Compare PCA for Biplot only drop-down tab is to explore and compare the other available PCs (PC1 vs PC2, PC2 vs PC3 and PC3 vs PC4).
-6.	Select one of the Format to download images in jpeg, png, pdf and tiff formats.
-7.	Provide width, height and resolution to the output PCA plot using numerical input tabs. The default values are 20cm, 20cm and 300px for width, height and resolution respectively.
-8.	Press Download button to download the PCA plot.
+5.	Most of the variables are explained in PC1 and PC2, however, to compare principal components, Select PC from **_Compare PCA for Biplot only drop-down tab_** is to **_explore and compare the other available PCs (PC1 vs PC2, PC2 vs PC3 and PC3 vs PC4)_**.
+6.	Select one of the **_Format_** to download images in **_jpeg, png, pdf and tiff formats_**.
+7.	Provide **_width, height_** and **_resolution_** to the **_output PCA plot_** using **_numerical input tabs_**. The default values are **_20cm, 20cm and 300px for width_**, **_height_** and **_resolution_** respectively.
+8.	Press **_Download button_** to download the **_PCA plot_**.
 
 # Plots
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.PNG" height = "600" width = "1200"> </img>
-1.	Scatter plot uses log fold change versus log counts per million to visualize your expression data in the form of up and down-regulated genes. Each dot in the scatter plot represents up-regulated genes (green colour),  non-significant genes (black colour) and downregulated genes (red colour).
-
-2.	The **slider input option** is available for the user to provide the **numeric input P-value cutoff** for both plots and **FC-cutoff for volcano plot** required to generate plots. The default numeric P-value cutoff is 0.02 and FC-cutoff is 1.2.
-3.	Using **plot title option** user can write a title to the generated plot (example:- Treatment-1).
-4.	Volcano plot uses log fold change versus -log10 (P-value), so that the most significant and highly upregulated and downregulated genes can be visualized. In the volcano plot each red rhombus shape represents the gene with gene name.
-5.	After selecting the treatment user have to click on the **checkbox of plots** required to generate plots and table to visualize the each treatment data with converted ids.
-6.	The output of the plots can be downloadable in four supporting image formats jpeg, png, pdf and tiff **using the drop-down format option**.
-7.	The dimension and the resolution of output plots can be adjusted with the help of **numerical input tabs**. The default value is 20, 20 and 300 for width, height and resolution, respectively.
-8.	After providing all the necessary information user can download the plots with the help of **Download button**.
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.png" height = "600" width = "1200"> </img>
+1.	Scatter plot uses log fold change versus log counts per million to visualize your expression data in the form of up and down-regulated genes. Each dot in the scatter plot represents up-regulated genes (green colour), non-significant genes (black colour) and downregulated genes (red colour).
+2.	Select from the **_Uploaded treatments_** checkboxes, Example- Treatment-1, then provide the **_numeric input Pvalue cutoff_** for both scatter and volcano plot and **_FC-cutoff for volcano plot_** to generate plots. The default numeric **_Pvalue cutoff_** is 0.001 and **_FC-cutoff_** is 1.2 for transcriptomics and change be changed.
+3.	Provide plot name (Example- “Scatter plot of hbmec induced with WNV”) in _**Plot title option_**.
+4.	Press one of the checkboxes of **_Plots_** to generate type of plot and **_Table_** to visualize each treatment data with converted ids on **_Scatter plot, Volcano plot or table output window_**.
+5.	Select image format type from the drop-down **_Format_** tab. 
+6.	Provide **_width, height_** and **_resolution_** to the **_output PCA plot_** using **_numerical input tabs_**. The default values are **_20cm, 20cm and 300px_** for **_width, height and resolution_**, respectively.
+7.	Press **_Download button_** to download the **_PCA plot_**.
+	
 
 # Statistical filtering
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_4.PNG" height = "700" width = "700"> </img>
-1.	With the help of **checkbox button treatments 1, 2, 3 and 4** you can visualize the data and plot of the selected treatment.
-2.  **Three numerical input boxes** are provided to filter out the genes that are unable to cross the threshold values. Three statistical parameters are log counts per million (expression value), log fold change (magnitude of change) and P-value (value of significance) provided to obtain significantly differentially expressed genes.
-3.	Use the **Venn diagram checkbox** to visualize the common significantly DEGs in the uploaded treatments. Also, you can use a Venn diagram to obtain common or different up and down-regulated genes in two group of treatments.
-4.	The dimension and the resolution of output Venn diagram and histogram can be adjusted with the help of **numerical input tabs**.The default value is 20, 20 and 300 for width, height and resolution, respectively.
-5.	Two separate **download tabs** first and second are provided to download Venn diagram and histogram, respectively.
-6.	Using **histogram** you can visualize the number of differentially expressed genes that falls on the log fold change range. Additionally, by using **all treatment checkbox** you can visualize the total number of up and down-regulated genes avialble in each treatment in a single histogram.
-7.	Using **Title** option you can write the title to the generated diagram or histogram (example:- Treatment-1)
-8.	The Venn diagram and histogram can be downloadable in four supporting **image formats jpeg, png, pdf and tiff using the drop-down format option.**
-9.	The generated diagram can be downloaded using the **Download button.**
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_4.png" height = "700" width = "700"> </img>
+1.	With the help of checkbox button, select one from **_Treatments uploaded tab_** (**_Treatment-1, Treatment-2, Treatment-3 and Treatment-4_**) you can visualize the data and plot of the selected treatment on **_Filter data, Venn Diagram and Histogram_** window.
+2.	Select one from the **_Omics Type_** drop down tab (Transcriptomics or Proteomics).
+3.	Provide threshold numerical values in **_Statistical filtering tab input boxes_** provided to filter out the genes that are unable to cross the threshold values. The default value is 0 for all components (**_LogFC, LogCPM, Pvalue_**).
+4.	Once the filtered data is visible on the **_Filter data window_**. Use the **_Venn Diagram checkbox_** to visualize the common significantly DEGs or abundance protein in the uploaded treatments. Use **_Split into Up and Down-regulated checkbox_** to obtain common or different up and down-regulated genes in two group of uploaded treatments.
+5.	Provide **_width, height_** and **_resolution_** to the **_output Venn diagram and Histogram_** using **_numerical input tabs_**. The default values are **_20cm, 20cm and 300px for width, height and resolution_**, respectively.
+6.	Use two separate **_Download tabs_**, first to download Venn diagram and second to download histogram.
+7.	Click on the **_Histogram’s Treatment checkbox_** and one treatment checkbox to generate each treatment histogram showing the number of differentially expressed genes or proteins that falls on the log fold change range and **_All Treatment checkbox_** generate the total number of up and down-regulated genes or proteins available in each treatment in a single histogram.
+8.	Use **_Title_** input tab to write the title to the generated diagram or histogram (example: - “Venn diagram or Histogram of Treatment-1”)
+9.	Select Venn diagram and Histogram **_image format types_** from **_jpeg, png, pdf and tiff using the drop-down Format_** option.
 
 # Gene ontology (GO) enrichment analysis
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_5.PNG" height = "500" width = "800"> </img>
-1.	Use the **ontology classes checkbox** to perform the categorical analysis of your expression data, either in the biological process (multiple molecular activities integrates to perform a process) or molecular function (activities at the molecular level by gene product) or cellular component (site of function concerning cellular structure).
-2. 	**P-value cutoff** and the **q-value cutoff** are provided to obtain enriched test and significantly enriched test, respectively. The default p-value and q-value cutoff is 0 and can be adjusted to 0.01 and 0.05.
-3.	The methods provided to perform **gene ontology enrichment analysis** are **over-represented analysis (ORA)**, (based on hypergeometric test and mapping of genes to the annotated biological vocabulary) and **gene set enrichment analysis** (GSEA), (based on the Kolmogorov Smirnov test and consider gene set with their log fold change value).
-4.	The gene ontology analysis main panel is populated with **subtabs Ontology result-1, Ontology result-2, Ontology result-3, and  Ontology result-4** each subtab shows the output result of the analysis.
-5.	After providing the necessary inputs click on the **Go button** it launch the enrichment analysis. Please keep in mind that the same input values will be used for all treatments.
-6.	In the **drop-down pAadjust method tab** 7 adjustment methods Holm, Hochberg, Hommel,  Bonferroni,  Benjamini and Hochberg (BH),  Benjamini and Yekutieli (BY), FDR and none are provided to control false postive result. Above mentioned first four methods control the family-wise error rate (probability of making one or more false discoveries) and      remaining methods control the expected proportion of discoveries that are rejected falsely (FDR). We suggest FDR correction methods for a more reliable result.
-7.	From the ontology result table, you need to provide one go term by selecting only one row and same GO term in all the treatments. This information will be used for the           visualization of heatmaps in the next **GO heatmaps panel**.
-8.	These gene ontology result can be downloaded in CSV format by **clicking on treatment checkbox and Download button**.
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_5.png" height = "500" width = "800"> </img>
+1.	Select the **_Omics Type_** according to the uploaded data types.
+2.	Use the **_Gene ontology classes checkbox_** to perform the categorical analysis of your expression data, either clicking on the **_GO Biological Process_** (multiple molecular activities integrates to perform a process) or **_GO Molecular Function_** (activities at the molecular level by gene product) or **_GO Cellular Component_** (site of function concerning cellular structure). 
+3.	After selecting one of the **_Gene ontology classes_**, provide **_Pvalue cutoff_** and the **_q-value cutoff ORA_**. The default Pvalue and q-value cutoff is 0 and can be adjusted.
+4.	Select one of the provided adjustment methods from **_pAadjust Method tab_**. List are Holm, Hochberg, Hommel, Bonferroni, Benjamini and Hochberg (BH), Benjamini and Yekutieli (BY), FDR to control false positive result. Above mentioned first four methods control the family-wise error rate (probability of making one or more false discoveries) and remaining methods control the expected proportion of discoveries that are rejected falsely (FDR). We suggest FDR correction methods for a more reliable result.
+5.	Select one of the provided **_Enrichment analysis method, GO ORA_** (based on hypergeometric test and mapping of genes to the annotated biological vocabulary) and **_GO GSEA_**(based on the Kolmogorov Smirnov test and consider gene set with their sorted log fold change value).
+6.	After providing the necessary inputs click on the **_Go! button_** to launch the enrichment analysis. Please keep in mind that the same input values will be used for all treatments to maintain the standard of enrichment analysis.
+7.	The result of the enrichment analysis is visualized on the **_subtabs Ontology result-1, Ontology result-2, Ontology result-3, and Ontology result-4_**.
+8.	From the ontology result table, **_select one enriched GO term by selecting only one row and same GO term in all the treatments_**. This information will be used for the generation of heatmaps in the next **_GO heatmaps section_**.
+9.	**_Download GO result_** in CSV format by **_clicking on treatment checkbox_** and then on **_Download button_**.
+
 
 # GO heatmaps
 <img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_6.PNG" height = "700" width = "800"> </img>
