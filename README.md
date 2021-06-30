@@ -25,7 +25,7 @@ version 1.4.1106.
 &quot;ReactomePA&quot;, &quot;Rgraphviz&quot;, &quot;S4Vectors&quot;, &quot;XVector&quot;, &quot;zlibbioc&quot;, &quot;STRINGdb&quot;,
 &quot;SPIA&quot;, &quot;SBGNview&quot;))
 
-# DATA FORMAT
+# DATA FORMAT TRANSCRIPTOMICS
 
 1.  Upload data must be in comma-separated-value (.CSV) file for transcriptomics data.
 2. Headers must be true in the uploaded file.
@@ -35,6 +35,15 @@ number).
 uploaded treatments of transcriptomics study.
 5. The data must be as shown in the data screenshot below.
 
+![Input data](https://github.com/Punit201016/OMnalysis/blob/main/www/upload_table.png)
+
+# DATA FORMAT PROTEOMICS
+
+1.	Upload data must be in xlsx file for the label free quantitative proteomics data.
+2.	Headers must be true in the uploaded file.
+3.	The first column must be biomarkers (In proteomics – UniProt ID).
+4.	Column names must be UniProt ID, FDR-adjusted P-value and Fold Change for all four uploaded treatments of proteomics study.
+5.	The data must be as shown in the data screenshot below. 
 ![Input data](https://github.com/Punit201016/OMnalysis/blob/main/www/upload_table.png)
 
 # UPLOAD DATA
