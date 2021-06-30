@@ -48,17 +48,20 @@ uploaded treatments of transcriptomics study.
 ![Input data](https://github.com/Punit201016/OMnalysis/blob/main/www/prot_table.png)
 
 # UPLOAD DATA
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_1.PNG" height = "600" width = "400"> </img>
-1.  The app features can be explored using the **Differentially expressed example data tab**.
-2.  Use the preloaded RNA-seq data of human brain microvascular endothelial cell line induced with four neuroinvasive pathogens (West Nile Virus and Tick-borne encephalitis virus protein E domain DIII and Neisseria meningitidis and its ligand MafA), capable to cause central nervous system infection. The raw data is published and can be acessed using https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8052/?query=wnv and https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6904618/.
-3.  Using **Upload Expression data Browse tab** the CSV file of expression matrix upto four experimental conditions with expression value (log fold change), a measure of significance (P-value), count of reads (log counts per million) can be uploaded. 
-4.  After uploading you may select from the currently provided species Human, Chicken, Pig and Cow with the help of a dropdown **select a species tab** to perform further analysis.
-5.  After selecting the species user needs to convert the less informative ENSEMBLGENE ID to more informative IDs using the **ID conversion tab**.
-6.  After mandatory ID conversion of list of genes in expression data,  user needs to click on the **SUBMIT button** to perform the ID conversion. 
-7.  The result of ID conversion can be downloaded using the **Download button** in CSV format.
+1.	The app features can be explored using the **_Differentially expressed example data tab_** for transcriptomics analysis and **_Proteomics abundance example data_** for proteomics data analysis.
+2.	In side panel below, use the preloaded RNA-Seq data produced by challenging human brain microvascular endothelial cells induced with Borrelia burgdorferi (Treatment1) and Neisseria meningitidis (Treatment2), Streptococcus pneumoniae (Treatment3) and West Nile Virus (Treatment4).
+3.	In the side panel below, use the preloaded label free proteomics example data of milk whey samples collected at different time point (36, 42, 57 and 81 hours) from cow intramammary infection induced with Streptococcus uberis bacteria (Mudaliar, et al., 2016).
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_1.png" height = "800" width = "800"> </img>
+4.	Select the **_Upload Expression Data Browse tab_**, to upload your own transcriptomics data in CSV file up to four experimental conditions with expression value (log fold change), a measure of significance (P-value), count of reads (log counts per million).
+5.	Select the second **_Upload Expression Data Browse tab_**, to upload your own proteomics data in xlsx format file up to four experimental conditions with UniProt ID, FDR-adjusted P-value and Fold Change.
+6.	Once the data is uploaded (**ONLY ONE OMICS TYPE at a time**), select the species provided in the select a species tab (Human, Chicken, Pig and Cow) with the help of a dropdown to perform further analysis.
+7.	After selecting the species user needs to convert the less informative ENSEMBLGENE ID or UniProt ID to more informative IDs using the _**ID conversion tab**_.
+8.	Press the **_SUBMIT button_** to perform the ID conversion and addition of converted ID column to the uploaded data.
+9.	Press the **_Download button_** to download the converted ID table in CSV format.
+
 
 # PCA
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_2.PNG" height = "500" width = "700"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_2.png" height = "600" width = "900"> </img>
 1.	Principal component analysis (PCA) is an unsupervised dimension reduction method that allows us to understand the relationships among the attributes of expression data. PCA analysis calculates the principal components using the Euclidean distance and linear transformation of the expression data. It calculates the most significant variable in the provided data to calculates first principal component (PC1), second principal component(PC2) and so on.
 2.	Two types of PCA plots are provided, first  is **variable PCA plot** that provides information about the direction and relationship among the variables (treatments) and second is **Biplot PCA** that visualize the features of variable PCA plot and observation (genes) of a specific variable in single plot.
 3.	Most of the variables are explained in PC1 and PC2, however, **only for Biplot PCA drop-down tab** is available to **explore and compare the other available PCs**.
@@ -66,7 +69,7 @@ uploaded treatments of transcriptomics study.
 5.	The **dimension and the resolution of output PCA plot** can be adjusted with the help of **numerical input tabs**. The default value are 20, 20 and 300 for width, height and resolution respectively.
 6. After providing all the necessary information you can download the **PCA plot using Download button.**
 # Plots
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.PNG" height = "600" width = "700"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.PNG" height = "600" width = "1200"> </img>
 1.	Scatter plot uses log fold change versus log counts per million to visualize your expression data in the form of up and down-regulated genes. Each dot in the scatter plot represents up-regulated genes (green colour),  non-significant genes (black colour) and downregulated genes (red colour).
 
 2.	The **slider input option** is available for the user to provide the **numeric input P-value cutoff** for both plots and **FC-cutoff for volcano plot** required to generate plots. The default numeric P-value cutoff is 0.02 and FC-cutoff is 1.2.
