@@ -61,13 +61,16 @@ uploaded treatments of transcriptomics study.
 
 
 # PCA
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_2.png" height = "600" width = "900"> </img>
-1.	Principal component analysis (PCA) is an unsupervised dimension reduction method that allows us to understand the relationships among the attributes of expression data. PCA analysis calculates the principal components using the Euclidean distance and linear transformation of the expression data. It calculates the most significant variable in the provided data to calculates first principal component (PC1), second principal component(PC2) and so on.
-2.	Two types of PCA plots are provided, first  is **variable PCA plot** that provides information about the direction and relationship among the variables (treatments) and second is **Biplot PCA** that visualize the features of variable PCA plot and observation (genes) of a specific variable in single plot.
-3.	Most of the variables are explained in PC1 and PC2, however, **only for Biplot PCA drop-down tab** is available to **explore and compare the other available PCs**.
-4.	The output of the reactive plot can be downloadble in four supporting **image formats jpeg, png, pdf and tiff**.
-5.	The **dimension and the resolution of output PCA plot** can be adjusted with the help of **numerical input tabs**. The default value are 20, 20 and 300 for width, height and resolution respectively.
-6. After providing all the necessary information you can download the **PCA plot using Download button.**
+1. Principal component analysis (PCA) is an unsupervised dimension reduction method that allows us to understand the relationships among the attributes of expression data. PCA analysis calculates the principal components using the Euclidean distance and linear transformation of the expression data. It calculates the most significant variable in the provided data to calculates first principal component (PC1), second principal component (PC2) and so on.
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_2.png" height = "500" width = "1000"> </img>
+2.	Two types of PCA plots are provided, first is _**Variable PCA**_ plot that provides information about the direction and relationship among the variables (treatments) and second is **_Biplot PCA_** that visualize the features of variable PCA plot and observation (genes or proteins) of each treatment in single plot.
+3.	Press _**Variable PCA**_ or **_Biplot PCA_** to generate transcriptomics variable PCA plot, biplot PCA plot in **_Plot visualization_** window. 
+4.	Press Variable PCA or Biplot PCA to generate proteomics variable PCA plot, biplot PCA plot in Plot visualization Proteomic window.
+5.	Most of the variables are explained in PC1 and PC2, however, to compare principal components, Select PC from Compare PCA for Biplot only drop-down tab is to explore and compare the other available PCs (PC1 vs PC2, PC2 vs PC3 and PC3 vs PC4).
+6.	Select one of the Format to download images in jpeg, png, pdf and tiff formats.
+7.	Provide width, height and resolution to the output PCA plot using numerical input tabs. The default values are 20cm, 20cm and 300px for width, height and resolution respectively.
+8.	Press Download button to download the PCA plot.
+
 # Plots
 <img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.PNG" height = "600" width = "1200"> </img>
 1.	Scatter plot uses log fold change versus log counts per million to visualize your expression data in the form of up and down-regulated genes. Each dot in the scatter plot represents up-regulated genes (green colour),  non-significant genes (black colour) and downregulated genes (red colour).
