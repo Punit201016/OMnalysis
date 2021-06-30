@@ -44,7 +44,8 @@ uploaded treatments of transcriptomics study.
 3.	The first column must be biomarkers (In proteomics – UniProt ID).
 4.	Column names must be UniProt ID, FDR-adjusted P-value and Fold Change for all four uploaded treatments of proteomics study.
 5.	The data must be as shown in the data screenshot below. 
-![Input data](https://github.com/Punit201016/OMnalysis/blob/main/www/upload_table.png)
+
+![Input data](https://github.com/Punit201016/OMnalysis/blob/main/www/prot_table.png)
 
 # UPLOAD DATA
 <img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_1.PNG" height = "600" width = "400"> </img>
