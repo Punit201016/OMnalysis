@@ -7,22 +7,35 @@ depends on commercial vendors or core facility to sequence and analyze their dat
 The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 
 # Instructions
-1. You can run this app on your desktop after installing R base and R studio.
+1. You can run this app on your desktop after installing R base version4.0.3 and R studio
+version 1.4.1106.
 2. Once the environment is ready, install packages required for OMnalysis.
 3. Install R shiny supporting packages.
-4. install.packages(c("flexdashboard", "dplyr", "shiny", "shinydashboard", "DT", "tidyverse", "shinythemes", "tidyr", "gplots", "tibble", "gridExtra", "RColorBrewer", "slickR", "devtools", "ggbiplot", "factoextra", "ggplot2", "data.table", "VennDiagram", "fields", "wordcloud", "SBGNview", "europepmc"))
-5. Install Bioconductor packages using Install.packages("BiocManager")
-6. install.packages(c("AnnotationDbi", "Biobase", "BiocFileCache", "BiocGenerics", "BiocParallel", "BiocVersion", "biomaRt", "Biostrings", "clusterProfiler", "DO.db", "DOSE", "EnhancedVolcano", "enrichplot", "fgsea", "GO.db", "GOSemSim", "graph", "graphite", "IRanges", "KEGGgraph", "KEGGREST", "org.Bt.eg.db", "org.Gg.eg.db", "org.Hs.eg.db", "org.Ss.eg.db", "pathview", "qvalue", "reactome.db", "ReactomePA", "Rgraphviz", "S4Vectors", "XVector", "zlibbioc"))
+4. install.packages(c(&quot;flexdashboard&quot;, &quot;dplyr&quot;, &quot;shiny&quot;, &quot;shinydashboard&quot;, &quot;DT&quot;,
+&quot;tidyverse&quot;, &quot;shinythemes&quot;, &quot;tidyr&quot;, &quot;gplots&quot;, &quot;tibble&quot;, &quot;gridExtra&quot;, &quot;RColorBrewer&quot;,
+&quot;slickR&quot;, &quot;devtools&quot;, &quot;ggbiplot&quot;, &quot;factoextra&quot;, &quot;ggplot2&quot;, &quot;data.table&quot;,
+&quot;VennDiagram&quot;, &quot;fields&quot;, &quot;wordcloud&quot;, &quot;SBGNview&quot;, &quot;europepmc&quot;, &quot;shinyjs&quot;,
+&quot;futile.logger&quot;, &quot;rio&quot;, &quot;plyr&quot;))
+5. Install Bioconductor packages version 3.12 using Install.packages(&quot;BiocManager&quot;)
+6. install.packages(c(&quot;AnnotationDbi&quot;, &quot;Biobase&quot;, &quot;BiocFileCache&quot;, &quot;BiocGenerics&quot;,
+&quot;BiocParallel&quot;, &quot;BiocVersion&quot;, &quot;biomaRt&quot;, &quot;Biostrings&quot;, &quot;clusterProfiler&quot;, &quot;DO.db&quot;,
+&quot;DOSE&quot;, &quot;EnhancedVolcano&quot;, &quot;enrichplot&quot;, &quot;fgsea&quot;, &quot;GO.db&quot;, &quot;GOSemSim&quot;,
+&quot;graph&quot;, &quot;graphite&quot;, &quot;IRanges&quot;, &quot;KEGGgraph&quot;, &quot;KEGGREST&quot;, &quot;org.Bt.eg.db&quot;,
+&quot;org.Gg.eg.db&quot;, &quot;org.Hs.eg.db&quot;, &quot;org.Ss.eg.db&quot;, &quot;pathview&quot;, &quot;qvalue&quot;, &quot;reactome.db&quot;,
+&quot;ReactomePA&quot;, &quot;Rgraphviz&quot;, &quot;S4Vectors&quot;, &quot;XVector&quot;, &quot;zlibbioc&quot;, &quot;STRINGdb&quot;,
+&quot;SPIA&quot;, &quot;SBGNview&quot;))
 
 # DATA FORMAT
 
-1.  Upload data must be in comma-separated-value (.CSV) file.
-2.  Headers must be true in the uploaded file.
-3.	The first column must be biomarkers (In transcriptomics – Ensembl accession number).
-4.	Column names must be ENSEMBLE ID, log FC, log CPM, P-value for all four uploaded treatments of transcriptomics study.
+1.  Upload data must be in comma-separated-value (.CSV) file for transcriptomics data.
+2. Headers must be true in the uploaded file.
+3. The first column must be biomarkers (In transcriptomics – Ensembl accession
+number).
+4. Column names must be ENSEMBLEGENE, logFC, logCPM, Pvalue for all four
+uploaded treatments of transcriptomics study.
+5. The data must be as shown in the data screenshot below.
 
 ![Input data](https://github.com/Punit201016/OMnalysis/blob/main/www/upload_table.png)
-5. The data must be as shown in the data screenshot above.
 
 # UPLOAD DATA
 <img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_1.PNG" height = "600" width = "400"> </img>
