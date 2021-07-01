@@ -1,13 +1,13 @@
 # OMnalysis: An intergrated web application to visulaize and analyze differential quantitative data
-OMnalysis is developed using R shiny, flexdashboard and bioconductor packages. This tool targets researchers who are new to RNA-seq technology and proteomics study and often depends on commercial vendors or core facilities to sequence and analyze their data. Although exploration of the identified list of genes and proteins is also tedious and challenging (Figure 1).
-There are open source R packages such as DeSeq2 and edgeR that are extensively used to identify differentially expressed genes from the count data. The filtering of DEGs using FDR value or Fold change value is still the matter of discussion among the scientific community, therefore the young researchers face difficulty to make actionable insight. OMnalysis uses the list of genes produced from edgeR’s glmTreat with count per million normalization, significance value (P-value) and fold change value assigned to each list of gene over or under expressed in the treatments (Figure 2). Whereas, for label-free relative quantitative proteomics data must contain the columns of UniProt ID, FDR-adjusted P-value and Fold Change in an excel file with each sheet of an experimental condition named Treatment1, Treatment2, Treatment3 and Treatment4 (Figure 3).
+**OMnalysis is developed using R shiny, flexdashboard and bioconductor packages.** This tool targets researchers who are new to RNA-seq technology and proteomics study and often depends on commercial vendors or core facilities to sequence and analyze their data. Although exploration of the identified list of genes and proteins is also tedious and challenging.
+There are open source R packages such as DESeq2 and edgeR that are extensively used to identify differentially expressed genes from the count data. The filtering of DEGs using FDR value or Fold change value is still the matter of discussion among the scientific community, therefore the young researchers face difficulty to make actionable insight. OMnalysis uses the list of genes produced from edgeR’s glmTreat with count per million normalization, significance value (P-value) and fold change value assigned to each list of gene over or under expressed in the treatments. Whereas, for label-free relative quantitative proteomics data must contain the columns of UniProt ID, FDR-adjusted P-value and Fold Change in an excel file with each sheet of an experimental condition named Treatment1, Treatment2, Treatment3 and Treatment4.
 
 ![OMnalysis workflow](https://github.com/Punit201016/OMnalysis/blob/main/www/OMnalysis_1.png)
 
 The app is hosted on shiny.io link https://omnalysis.shinyapps.io/OMnalysis/
 
 # Instructions
-1. You can run this app on your desktop after installing R base version4.0.3 and R studio
+1. You can run this app on your desktop after installing R base version 4.0.3 and R studio
 version 1.4.1106.
 2. Once the environment is ready, install packages required for OMnalysis.
 3. Install R shiny supporting packages.
@@ -27,11 +27,11 @@ version 1.4.1106.
 
 # DATA FORMAT TRANSCRIPTOMICS
 
-1.  Upload data must be in comma-separated-value (.CSV) file for transcriptomics data.
+1. Upload data must be in **_comma-separated-value (.CSV)_** file for transcriptomics data.
 2. Headers must be true in the uploaded file.
 3. The first column must be biomarkers (In transcriptomics – Ensembl accession
 number).
-4. Column names must be ENSEMBLEGENE, logFC, logCPM, Pvalue for all four
+4. Column names must be **_ENSEMBLEGENE, logFC, logCPM, Pvalue_** for all four
 uploaded treatments of transcriptomics study.
 5. The data must be as shown in the data screenshot below.
 
@@ -39,10 +39,10 @@ uploaded treatments of transcriptomics study.
 
 # DATA FORMAT PROTEOMICS
 
-1.	Upload data must be in the xlsx file for the label free quantitative proteomics data.
+1.	Upload data must be in the **_xlsx file_** for the label free quantitative proteomics data.
 2.	Headers must be true in the uploaded file.
 3.	The first column must be biomarkers (In proteomics – UniProt ID).
-4.	Column names must be UniProt ID, FDR-adjusted P-value and Fold Change for all four uploaded treatments of proteomics study.
+4.	Column names must be **_UniProt ID, FDR-adjusted P-value and Fold Change_** for all four uploaded treatments of proteomics study.
 5.	The data must be as shown in the data screenshot below. 
 
 ![Input data](https://github.com/Punit201016/OMnalysis/blob/main/www/prot_table.png)
