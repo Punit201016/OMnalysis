@@ -135,20 +135,20 @@ Click on the **_Pathway enrichment result Treatments_** and then **_Download but
 
 # Enriched pathway visualization
 <img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_8.png" height = "300" width = "1200"> </img>
-1. After selecting the single and same pathway in all the treatments from the pathway enrichment result table, you can visualize the pathway using pathway visualization tabs and according to the pathway enrichment method performed in the previous section of OMnalysis. 
-2. Select one of the Pathway ORA, Pathway GSEA, ReactomePA and STRING PPI checkbox provided in Pathway visualization. You can select any one of them and view the output on the right-side subtab panels ORA pathway output or GSEA pathway output or Reactome pathway output or STRING network.
-3. If the previous pathway enrichment analysis was ORA, then only the ORA pathway will be visualized in the ORA pathway output subtab, if not, it will show an error.
-4. Select the color code from three drop down tabs for highly expressed (Up), No induced or absent expressed (No sign) and supressed genes or proteins (Down).
-5. The default colour code for Up is green, No sign grey and Down in red. You can select more colour combination from the none, red, green, yellow, blue, and grey to visualize the expression values on enriched pathway.
-6. Select the Treatments uploaded to visualize the enriched pathway of Treatment-1, Treatment-2, Treatment-3, Treatment-4.
+1. After selecting the single and same pathway in all the treatments from the **_pathway enrichment result table_**, you can visualize the pathway using **_pathway visualization tabs and according to the pathway enrichment method performed in the previous section of OMnalysis_**. 
+2. Select one of the **_Pathway ORA, Pathway GSEA, ReactomePA_** and **_STRING PPI_** checkbox provided in **_Pathway visualization_**. You can select any one of them and view the output on the right-side **_subtab panels ORA pathway output_** or **_GSEA pathway output_** or **_Reactome pathway output_** or **_STRING network_**.
+3. If the previous pathway enrichment analysis was ORA, then only the ORA pathway will be visualized in the **_ORA pathway output subtab_**, if not, it will show an error.
+4. Select the color code from three drop down tabs for **_highly expressed (Up)_**, **_No induced or absent expressed (No sign)_** and **_supressed genes or proteins (Down)_**.
+5. The default colour code for **_Up is green_**, **_No sign grey_** and **_Down in red_**. You can select more colour combination from the **_none, red, green, yellow, blue, and grey to visualize the expression values on enriched pathway_**.
+6. Select the **_Treatments uploaded_** to visualize the enriched pathway of **_Treatment-1, Treatment-2, Treatment-3, Treatment-4_**.
 7. The output from the reactome pathway analysis can be interpreted using the below notation image.	
 <img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_10.png" height = "700" width = "800"> </img>
-8. Keep in mind that the visualization of pathways depends on the pathway enrichment analysis method and selection of the same pathway in all treatments.
-9. Press the Download tab to download the pathway image of ORA, GSEA and ReactomePA and STRING output in PNG image format.
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_11.png" height = "700" width = "800"> </img>
+8. Keep in mind that the visualization of pathways depends on the **_pathway enrichment analysis method_** and **_selection of the same pathway in all treatments_**.
+9. Press the **_Download tab_** to download the **_pathway image of ORA, GSEA and ReactomePA and STRING output in PNG image format_**.
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_11.jpg" height = "700" width = "800"> </img>
 
 # Literature info
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_9.png" height = "250" width = "1300"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_9.png" height = "250" width = "1400"> </img>
 1. This section provides the option to retrieve the information from the Europe PMC by providing **_biomarkers name, species, disease, cell or tissue type_** in the **_text input tab below Literature search_**.
 2. The **_Literature retrieval limit_** has an input option to provide a number that will decide the fetching of the literatures. The default is 100.
 3. Once the literature search and retrieval limit are provided, you can **_proceed with the submit button to perform the retrieval of scientific literature_**.
