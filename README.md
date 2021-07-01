@@ -56,7 +56,7 @@ uploaded treatments of transcriptomics study.
 5.	Select the second **_Upload Expression Data Browse tab_**, to upload your own proteomics data in xlsx format file up to four experimental conditions with UniProt ID, FDR-adjusted P-value and Fold Change.
 6.	Once the data is uploaded (**ONLY ONE OMICS TYPE at a time**), select the species provided in the select a species tab (Human, Chicken, Pig and Cow) with the help of a dropdown to perform further analysis.
 7.	After selecting the species user needs to convert the less informative ENSEMBLGENE ID or UniProt ID to more informative IDs using the _**ID conversion tab**_.
-8.	Press the **_SUBMIT button_** to perform the ID conversion and addition of converted ID column to the uploaded data.
+8.	Press the **_Submit button_** to perform the ID conversion and addition of converted ID column to the uploaded data.
 9.	Press the **_Download button_** to download the converted ID table in CSV format.
 
 
@@ -72,10 +72,10 @@ uploaded treatments of transcriptomics study.
 8.	Press **_Download button_** to download the **_PCA plot_**.
 
 # Plots
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.png" height = "600" width = "1200"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.png" height = "700" width = "900"> </img>
 1.	Scatter plot uses log fold change versus log counts per million to visualize your expression data in the form of up and down-regulated genes. Each dot in the scatter plot represents up-regulated genes (green colour), non-significant genes (black colour) and downregulated genes (red colour).
 2.	Select from the **_Uploaded treatments_** checkboxes, Example- Treatment-1, then provide the **_numeric input Pvalue cutoff_** for both scatter and volcano plot and **_FC-cutoff for volcano plot_** to generate plots. The default numeric **_Pvalue cutoff_** is 0.001 and **_FC-cutoff_** is 1.2 for transcriptomics and change be changed.
-3.	Provide plot name (Example- “Scatter plot of hbmec induced with WNV”) in _**Plot title option_**.
+3.	Provide plot name (Example- “Scatter plot of hbmec induced with WNV”) in **_Plot title option_**.
 4.	Press one of the checkboxes of **_Plots_** to generate type of plot and **_Table_** to visualize each treatment data with converted ids on **_Scatter plot, Volcano plot or table output window_**.
 5.	Select image format type from the drop-down **_Format_** tab. 
 6.	Provide **_width, height_** and **_resolution_** to the **_output PCA plot_** using **_numerical input tabs_**. The default values are **_20cm, 20cm and 300px_** for **_width, height and resolution_**, respectively.
@@ -83,7 +83,7 @@ uploaded treatments of transcriptomics study.
 	
 
 # Statistical filtering
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_4.png" height = "700" width = "700"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_4.png" height = "900" width = "900"> </img>
 1.	With the help of checkbox button, select one from **_Treatments uploaded tab_** (**_Treatment-1, Treatment-2, Treatment-3 and Treatment-4_**) you can visualize the data and plot of the selected treatment on **_Filter data, Venn Diagram and Histogram_** window.
 2.	Select one from the **_Omics Type_** drop down tab (Transcriptomics or Proteomics).
 3.	Provide threshold numerical values in **_Statistical filtering tab input boxes_** provided to filter out the genes that are unable to cross the threshold values. The default value is 0 for all components (**_LogFC, LogCPM, Pvalue_**).
