@@ -148,7 +148,7 @@ Click on the **_Pathway enrichment result Treatments_** and then **_Download but
 <img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_11.jpg" height = "700" width = "800"> </img>
 
 # Literature info
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_9.png" height = "250" width = "1400"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_9.png" height = "250" width = "1500"> </img>
 1. This section provides the option to retrieve the information from the Europe PMC by providing **_biomarkers name, species, disease, cell or tissue type_** in the **_text input tab below Literature search_**.
 2. The **_Literature retrieval limit_** has an input option to provide a number that will decide the fetching of the literatures. The default is 100.
 3. Once the literature search and retrieval limit are provided, you can **_proceed with the submit button to perform the retrieval of scientific literature_**.
