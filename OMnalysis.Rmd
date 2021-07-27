@@ -89,7 +89,7 @@ br()
 shinyjs::useShinyjs(rmd = TRUE)
 div(style = "width: 150px;", actionButton(inputId = "uploaded_ex", "Differentially expressed example data"))
 
-div(.progress = {"height: 0px;"}, fileInput(inputId = "inFile", label = h5(strong("Upload Expression Data")),
+div(.progress = {"height: 0px;"}, fileInput(inputId = "inFile", label = h5(strong("Upload expression data")),
 multiple = TRUE, accept = c(
                     "text/csv",
                     "text/comma-separated-values",
@@ -98,7 +98,7 @@ multiple = TRUE, accept = c(
 
 div(style = "width: 150px;", actionButton(inputId = "uploaded_ex1", "Proteomics abundance example data"))
 
-div(.progress = {"height: 0px;"}, fileInput(inputId = "inFile1", label = h5(strong("Upload Expression Data")),
+div(.progress = {"height: 0px;"}, fileInput(inputId = "inFile1", label = h5(strong("Upload abundance data")),
 multiple = TRUE, accept = c(
                     "text/csv",
                     "text/comma-separated-values",
@@ -162,6 +162,7 @@ library(shinyjs)
 library(futile.logger)
 library(SBGNview)
 library(STRINGdb)
+library(magick)
 futile.logger::flog.threshold(futile.logger::ERROR, name = "VennDiagramLogger")
 set.seed(1234)
 })
@@ -179,7 +180,7 @@ observe({
 })
 observe({
   req(input$uploaded_ex)
-  rv$data <- read.csv("Test_t.csv")
+  rv$data <- read.csv("Test_t.csv", header = TRUE)
   })
 observeEvent(input$reset_1, {
   rv$data <- NULL
@@ -346,7 +347,7 @@ filename = function(){
 paste("PCA plot", input$select_PCA, sep = ".")
 },
 content = function(file){
-if(input$PCA_M == TRUE){ggsave(file, plot(Plot_PCA_1()), device = input$select_PCA, width = input$Download_PCA_input1, height = input$Download_PCA_input2, units = "cm", dpi = input$Download_PCA_input3)}
+if(input$PCA_M > 0){ggsave(file, plot(Plot_PCA_1()), device = input$select_PCA, width = input$Download_PCA_input1, height = input$Download_PCA_input2, units = "cm", dpi = input$Download_PCA_input3)}
 else {ggsave(file, plot(Plot_PCA_2()), device = input$select_PCA, width = input$Download_PCA_input1, height = input$Download_PCA_input2, units = "cm", dpi = input$Download_PCA_input3)}
 }
 )
@@ -359,6 +360,7 @@ else {ggsave(file, plot(Plot_PCA_2()), device = input$select_PCA, width = input$
 ### Plot visualization transcriptomics
 
 ```{r, echo=FALSE}
+
 Plot_PCA_1 <- reactive({
 PCA_T1 <- data_list_2()[, -c(1,3,4,6,7,9,10,12,13,15,16)]
 PCA_T1.pca <- prcomp(PCA_T1[, -ncol(PCA_T1)], scale. = TRUE, center = TRUE)
@@ -389,6 +391,17 @@ Sys.sleep(0.1)}
 plot(Plot_PCA_1())}
 })
 plotOutput("PCA_plot_1")
+
+output$PCA_plot <- downloadHandler(
+filename = function(){
+paste("PCA plot", input$select_PCA, sep = ".")
+},
+content = function(file){
+if(input$PCA_M > 0)
+{ggsave(file, plot(Plot_PCA_1()), device = input$select_PCA, width = input$Download_PCA_input1, height = input$Download_PCA_input2, units = "cm", dpi = input$Download_PCA_input3)}
+else {ggsave(file, plot(Plot_PCA_2()), device = input$select_PCA, width = input$Download_PCA_input1, height = input$Download_PCA_input2, units = "cm", dpi = input$Download_PCA_input3)}
+}
+)
 
 
 ```
@@ -423,7 +436,10 @@ final_prot_PCA_3 <- final_prot_PCA_2
 Plot_PCA_2 <- reactive({
 PCA_T1 <- Plot_PCA_prot1()
 PCA_T1 <- PCA_T1[, c(1,3,6,9,12)]
+
+
 PCA_T1.pca <- prcomp(PCA_T1[, -1], scale. = TRUE, center = TRUE)
+
 if (input$PCA_M == "Variables PCA"){
 PCA_plot_VA <- fviz_pca_var(PCA_T1.pca, col.var = "contrib", gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"), repel = TRUE)
 }
@@ -451,16 +467,19 @@ plot(Plot_PCA_2())}
 })
 plotOutput("PCA_plot_3")
 
+
 # for download PCA images
 output$PCA_plot <- downloadHandler(
 filename = function(){
 paste("PCA plot", input$select_PCA, sep = ".")
 },
 content = function(file){
-if(input$PCA_M == TRUE){ggsave(file, plot(Plot_PCA_1()), device = input$select_PCA, width = input$Download_PCA_input1, height = input$Download_PCA_input2, units = "cm", dpi = input$Download_PCA_input3)}
+if(input$PCA_M > 0)
+{ggsave(file, plot(Plot_PCA_1()), device = input$select_PCA, width = input$Download_PCA_input1, height = input$Download_PCA_input2, units = "cm", dpi = input$Download_PCA_input3)}
 else {ggsave(file, plot(Plot_PCA_2()), device = input$select_PCA, width = input$Download_PCA_input1, height = input$Download_PCA_input2, units = "cm", dpi = input$Download_PCA_input3)}
 }
 )
+
 
 ```
 
@@ -1142,6 +1161,8 @@ checkboxGroupInput(inputId = "checkbox_GSE_GO", label = h5(strong("Enrichment an
 actionButton(inputId = "submit_GO", "Go!")
 checkboxGroupInput(inputId = "heatmapT1_table", label = h5(strong("Download GO result")), choices = list("Treatment-1", "Treatment-2", "Treatment-3", "Treatment-4"),inline = TRUE)
 downloadButton(inputId = "GO_result", label = "Download", icon ("fas fa-download"), style = "color: #fff; background-color :#33B2FF")
+
+
 downloadHandler(
 filename = function(){
 if (input$heatmapT1_table == "Treatment-1")
@@ -1715,7 +1736,6 @@ h_1_heatmap <- inner_join(x = GO_separated_gene_4, y = new_h1_heat_merge_2, by =
 }
 })
 
-
 #data preparation for gsea heatmap treatment 4
 heatmap_plot_data_gsea_4 <- reactive({
 #all uploaded file data with different ids  
@@ -1819,8 +1839,8 @@ else if (input$select_format_GO == "tiff"){
 tiff(file, width = input$Download_heat_input1, height = input$Download_heat_input2, res = input$Download_heat_input3, units = "cm")
 print(final_heat_map_plot())
 dev.off()}  
-  
-})
+  })
+
 h5(strong("Visualization of Ontology"))
 fluidRow(column(4,checkboxGroupInput(inputId = "checkbox_4", label = "", choices = list("Word Cloud"), inline = TRUE)),
 column(4,numericInput( inputId = "wordcloud_input1",  label = h6("max.words"), value = 100, min = 10, max = 500, step = 50, width = '100%')))
@@ -1910,8 +1930,6 @@ heatmap_f3 <- na.omit(heatmap_f2)
 heatmap_f3
 }
 })
-
-
 
 heatmap_11 <- reactive({
 if (all(c("Treatment-1", "Treatment-2") %in% input$heatmapT1)){
@@ -2016,7 +2034,6 @@ p1 <- recordPlot()
   })
 
 
-
 final_gse_table <- reactive({
 if (c("Treatment-2" %in% input$heatmapT1) && ("GO GSEA" %in% input$checkbox_heatmap_GO))
 {heatmap_gse_12()}
@@ -2032,8 +2049,6 @@ else if (c("Treatment-4" %in% input$heatmapT1) &&  ("GO ORA" %in% input$checkbox
 {heatmap_ora_14()}
   
 })
-
-
 
 output$heatmap_16 <- renderPlot({
 validate(need(input$checkbox_heatmap_GO != "", "Please select heatmap visualization for heatmap construction."),
@@ -2127,11 +2142,12 @@ dev.off()}
 ```
 
 ### Heatmap table
+
 ```{r, echo=FALSE}
  output$Table_output_3 <- DT::renderDataTable({final_gse_table()}, options = list(scroller = TRUE, scrollY = 510, scrollX = TRUE, pageLength = 25))
  DT::dataTableOutput("Table_output_3")
 ```
- 
+
 # Pathway enrichment analysis
 
 ## Sidebar {.sidebar data-width="350"}
@@ -2336,8 +2352,7 @@ else if(c(4 %in% input$select1) && ("STRING" %in% input$checkbox_KEGG)) {
 string_db <- STRINGdb$new(version = "11", species = 9913, score_threshold = 200, input_directory = "")
 string_db
 }
-  
-  })
+   })
 
 string_table_2 <- reactive({
   
@@ -2667,7 +2682,6 @@ else if (input$checkbox_KEGG == "STRING"){
 hits <- string_table_2_2()$STRING_id[1:200]  
 enrichment_string <- string_table_1()$get_enrichment(hits)
 }
-
 )
 KEGG_002
 })
@@ -2949,7 +2963,6 @@ else if (input$checkbox_KEGG == "STRING"){
 hits <- string_table_2_3()$STRING_id[1:200]  
 enrichment_string <- string_table_1()$get_enrichment(hits)
 }
-
 )
 KEGG_003
 })
@@ -3397,17 +3410,16 @@ strong(p("ALERT:- Please rerun the pathway enrichment analysis and then select o
 
 downloadHandler(
 filename = function(){
-  if(input$checkbox_Pathway == "Pathway ORA"){
-  paste0(pathway_ora_plot_1()[1, 1], "ora.pathview.png")}
-  else if (input$checkbox_Pathway == "Pathway GSEA"){
-  paste0(pathway_gsea_plot_1()[1, 1], "gsea.pathview.multi.png")}
-  else if (input$checkbox_Pathway == "ReactomePA"){
-  paste0("reactome_", pathway_react_plot_1()[1,1], ".png")}
-  else if (input$checkbox_Pathway == "STRING PPI"){
-  paste0("string_network_1.png")
-    }
-      
-},
+if(input$checkbox_Pathway == "Pathway ORA"){
+paste0(pathway_ora_plot_1()[1, 1], "ora.pathview.png")}
+else if (input$checkbox_Pathway == "Pathway GSEA"){
+paste0(pathway_gsea_plot_1()[1, 1], "gsea.pathview.multi.png")}
+else if (input$checkbox_Pathway == "ReactomePA"){
+paste0("reactome_", pathway_react_plot_1()[1,1], ".png")}
+else if (input$checkbox_Pathway == "STRING PPI"){
+paste0("string_network_1.png")
+}
+    },
 content <- function(file){
 if(input$T1 == "Treatment-1" && input$checkbox_Pathway == "Pathway ORA")  
 {file.copy(paste0(pathway_ora_plot_1()[1, 1], ".pathview.png"), file)}
@@ -3419,8 +3431,14 @@ if(input$T1 != "Treatment-1" && input$checkbox_Pathway == "Pathway GSEA")
 {file.copy(paste0(pathway_gsea_plot_1()[1, 1], ".pathview.multi.png"), file)}  
 if(input$checkbox_Pathway == "ReactomePA") 
 {file.copy(paste0("reactome_", pathway_react_plot_1()[1,1], ".png"), file)} 
-if(input$checkbox_Pathway == "STRING PPI") 
-{file.copy("string_network_1.png", file)}
+if(input$T1 == "Treatment-1" && input$checkbox_Pathway == "STRING PPI") 
+{file.copy(paste0("Img_1.png"), file)}
+if(input$T1 == "Treatment-2" && input$checkbox_Pathway == "STRING PPI") 
+{file.copy(paste0("Img_2.png"), file)} 
+if(input$T1 == "Treatment-3" && input$checkbox_Pathway == "STRING PPI") 
+{file.copy(paste0("Img_3.png"), file)}
+if(input$T1 == "Treatment-4" && input$checkbox_Pathway == "STRING PPI") 
+{file.copy(paste0("Img_4.png"), file)}
   },
 contentType = "image/png"
 )
@@ -3607,6 +3625,7 @@ imageOutput("pathway_gsea_plot")
 ```
 
 ### Reactome pathway output
+
 ```{r, echo= FALSE}
 # these codes is for pathway reactome treatment-1
 reactome_pathview_1 <-reactive({
@@ -3747,9 +3766,10 @@ imageOutput("pathway_reactome_plot")
 ```
 
 ### STRING network
+
 ```{r, echo=FALSE}
 
-output$plot_string <- renderPlot({ 
+output$plot_string <- renderImage({
   
 validate(need(input$checkbox_Pathway != "", "Please select the STRING PPI checkbox."),
          need(input$T1 != "", "Please select the treatment that you want to visualize!")
@@ -3761,11 +3781,10 @@ withProgress(message = "Constructing protein protein interaction.",  detail = "I
 for(i in 1:10)
 {incProgress(1/15)
  Sys.sleep(0.1)}  
-})
- }
-
-if (c("STRING PPI" %in% input$checkbox_Pathway) && ("Treatment-1" %in% input$T1)) {
+})}
   
+if (c("STRING PPI" %in% input$checkbox_Pathway) && ("Treatment-1" %in% input$T1)) {
+
 rbPal <- colorRampPalette(c("red", "white", "green"))
 
 string_net_1 <- string_table_2()
@@ -3773,50 +3792,100 @@ string_net_2 <- string_net_1$STRING_id[1:200]
 string_net_1$Col <- rbPal(10)[as.numeric(cut(string_net_1$logFC,breaks = 10))]
 payload_id <- string_table_1()$post_payload(string_net_1$STRING_id, colors = string_net_1$Col)  
 
-string_table_1()$plot_network(string_net_2, payload_id = payload_id)
-legend("topright", legend = c("up", "no sign", "down"), col = c(input$Colour_high, input$Colour_med, input$Colour_low), lty = 10,lwd = 18,bty = "n")
-legend("bottomleft", legend = c("from curated databases", "experimentally determined", "gene neighborhood", "gene fusions", "gene co-occurrence", "textmining", "co-expression", "protein homology"), col = c("deepskyblue1", "pink", "green", "red", "blue3", "darkolivegreen1", "black", "darkorchid1"), title = "Interactions", lty = 5,lwd = 3, bty = "n")
 
+string_table_1()$get_png(string_net_2, payload_id = payload_id,  file = "network1.png")  
+
+Img_1  <- image_read(normalizePath(paste0("network1.png")))
+Img_1 <- image_draw(image = Img_1)
+
+legend("bottomleft", legend = c("from curated databases", "experimentally determined", "gene neighborhood", "gene fusions", "gene co-occurrence", "textmining", "co-expression", "protein homology"), col = c("deepskyblue1", "pink", "green", "red", "blue3", "darkolivegreen1", "black", "darkorchid1"), title = "Interactions", lty = 6,lwd = 4, bty = "n")
+
+legend("topright", legend = c("up", "no sign", "down"), col = c(input$Colour_high, input$Colour_med, input$Colour_low), title = "regulation (Halo)", lty = 10,lwd = 18, bty = "n")
+
+print(Img_1)
+ 
+image_write(Img_1, path = "Img_1.png", format = 'png')
 }
+
 else if (c("STRING PPI" %in% input$checkbox_Pathway) && ("Treatment-2" %in% input$T1)) {
-rbPal <- colorRampPalette(c("red", "white", "green"))
+rbPal <- colorRampPalette(c('red', 'white', 'green'))
 
 string_net_1 <- string_table_2_2()
 string_net_2 <- string_net_1$STRING_id[1:200]
 string_net_1$Col <- rbPal(10)[as.numeric(cut(string_net_1$logFC,breaks = 10))]
 payload_id <- string_table_1()$post_payload(string_net_1$STRING_id, colors = string_net_1$Col)  
-string_table_1()$plot_network(string_net_2, payload_id = payload_id)
-legend("topright", legend = c("up", "no sign", "down"), col = c(input$Colour_high, input$Colour_med, input$Colour_low), lty = 10,lwd = 18,bty = "n")
-legend("bottomleft", legend = c("from curated databases", "experimentally determined", "gene neighborhood", "gene fusions", "gene co-occurrence", "textmining", "co-expression", "protein homology"), col = c("deepskyblue1", "pink", "green", "red", "blue3", "darkolivegreen1", "black", "darkorchid1"), title = "Interactions", lty = 5,lwd = 3, bty = "n")
+string_table_1()$get_png(string_net_2, payload_id = payload_id,  file = "network2.png")
+
+Img_2  <- image_read(normalizePath(paste0("network2.png")))
+Img_2 <- image_draw(image = Img_2)
+
+legend("bottomleft", legend = c("from curated databases", "experimentally determined", "gene neighborhood", "gene fusions", "gene co-occurrence", "textmining", "co-expression", "protein homology"), col = c("deepskyblue1", "pink", "green", "red", "blue3", "darkolivegreen1", "black", "darkorchid1"), title = "Interactions", lty = 6,lwd = 4, bty = "n")
+
+legend("topright", legend = c("up", "no sign", "down"), col = c(input$Colour_high, input$Colour_med, input$Colour_low), title = "regulation (Halo)", lty = 10,lwd = 18, bty = "n")
+
+print(Img_2)
+ 
+
+image_write(Img_2, path = "Img_2.png", format = 'png')
 } 
 
+  
 else if (c("STRING PPI" %in% input$checkbox_Pathway) && ("Treatment-3" %in% input$T1)) {
-rbPal <- colorRampPalette(c("red", "white", "green"))
+rbPal <- colorRampPalette(c('red', 'white', 'green'))
 
 string_net_1 <- string_table_2_3()
 string_net_2 <- string_net_1$STRING_id[1:200]
 string_net_1$Col <- rbPal(10)[as.numeric(cut(string_net_1$logFC,breaks = 10))]
 payload_id <- string_table_1()$post_payload(string_net_1$STRING_id, colors = string_net_1$Col)  
-string_table_1()$plot_network(string_net_2, payload_id = payload_id) 
-legend("topright", legend = c("up", "no sign", "down"), col = c(input$Colour_high, input$Colour_med, input$Colour_low), lty = 10,lwd = 18,bty = "n")
-legend("bottomleft", legend = c("from curated databases", "experimentally determined", "gene neighborhood", "gene fusions", "gene co-occurrence", "textmining", "co-expression", "protein homology"), col = c("deepskyblue1", "pink", "green", "red", "blue3", "darkolivegreen1", "black", "darkorchid1"), title = "Interactions", lty = 5,lwd = 3, bty = "n")
+string_table_1()$get_png(string_net_2, payload_id = payload_id,  file = "network3.png")
+
+Img_3  <- image_read(normalizePath(paste0("network3.png")))
+Img_3 <- image_draw(image = Img_3)
+
+legend("bottomleft", legend = c("from curated databases", "experimentally determined", "gene neighborhood", "gene fusions", "gene co-occurrence", "textmining", "co-expression", "protein homology"), col = c("deepskyblue1", "pink", "green", "red", "blue3", "darkolivegreen1", "black", "darkorchid1"), title = "Interactions", lty = 6,lwd = 4, bty = "n")
+
+legend("topright", legend = c("up", "no sign", "down"), col = c(input$Colour_high, input$Colour_med, input$Colour_low), title = "regulation (Halo)", lty = 10,lwd = 18, bty = "n")
+
+print(Img_3)
+ 
+image_write(Img_3, path = "Img_3.png", format = 'png')
 } 
+
 else if (c("STRING PPI" %in% input$checkbox_Pathway) && ("Treatment-4" %in% input$T1)) {
-rbPal <- colorRampPalette(c("red", "white", "green"))
+rbPal <- colorRampPalette(c('red', 'white', 'green'))
 
 string_net_1 <- string_table_2_4()
 string_net_2 <- string_net_1$STRING_id[1:200]
 string_net_1$Col <- rbPal(10)[as.numeric(cut(string_net_1$logFC,breaks = 10))]
 payload_id <- string_table_1()$post_payload(string_net_1$STRING_id, colors = string_net_1$Col)  
-string_table_1()$plot_network(string_net_2, payload_id = payload_id)
-legend("topright", legend = c("up", "no sign", "down"), col = c(input$Colour_high, input$Colour_med, input$Colour_low), lty = 10,lwd = 18,bty = "n")
-legend("bottomleft", legend = c("from curated databases", "experimentally determined", "gene neighborhood", "gene fusions", "gene co-occurrence", "textmining", "co-expression", "protein homology"), col = c("deepskyblue1", "pink", "green", "red", "blue3", "darkolivegreen1", "black", "darkorchid1"), title = "Interactions", lty = 5,lwd = 3, bty = "n")
-}
+string_table_1()$get_png(string_net_2, payload_id = payload_id,  file = "network4.png")
 
-})
+Img_4  <- image_read(normalizePath(paste0("network4.png")))
+Img_4 <- image_draw(image = Img_4)
 
-plotOutput("plot_string") 
+legend("bottomleft", legend = c("from curated databases", "experimentally determined", "gene neighborhood", "gene fusions", "gene co-occurrence", "textmining", "co-expression", "protein homology"), col = c("deepskyblue1", "pink", "green", "red", "blue3", "darkolivegreen1", "black", "darkorchid1"), title = "Interactions", lty = 6,lwd = 4, bty = "n")
 
+legend("topright", legend = c("up", "no sign", "down"), col = c(input$Colour_high, input$Colour_med, input$Colour_low), title = "regulation (Halo)", lty = 10,lwd = 18, bty = "n")
+
+print(Img_4)
+ 
+image_write(Img_4, path = "Img_4.png", format = 'png')
+} 
+
+outfile <- if(input$T1 == "Treatment-1"){normalizePath(path = paste0("Img_1.png"))}
+          else if(input$T1 == "Treatment-2"){normalizePath(path = paste0("Img_2.png"))}
+          else if(input$T1 == "Treatment-3"){normalizePath(path = paste0("Img_3.png"))}
+          else if(input$T1 == "Treatment-4"){normalizePath(path = paste0("Img_4.png"))}
+
+width <- session$clientData$output_plot_string_width
+height <- session$clientData$output_plot_string_height
+  
+list(src = outfile,
+     width = width,
+     height = height,
+     contentType = "image/png")
+}, deleteFile = FALSE)
+imageOutput("plot_string")   
 
 
 ######################
@@ -3824,17 +3893,16 @@ plotOutput("plot_string")
 ######################
 output$download_pathway <- downloadHandler(
 filename = function(){
-  if(input$checkbox_Pathway == "Pathway ORA"){
-  paste0(pathway_ora_plot_1()[1, 1], "ora.pathview.png")}
-  else if (input$checkbox_Pathway == "Pathway GSEA"){
-  paste0(pathway_gsea_plot_1()[1, 1], "gsea.pathview.multi.png")}
-  else if (input$checkbox_Pathway == "ReactomePA"){
-  paste0("reactome_", pathway_react_plot_1()[1,1], ".png")}
-  else if (input$checkbox_Pathway == "STRING PPI"){
-  paste0("string_network_1.png")
-    }
-      
-},
+if(input$checkbox_Pathway == "Pathway ORA"){
+paste0(pathway_ora_plot_1()[1, 1], "ora.pathview.png")}
+else if (input$checkbox_Pathway == "Pathway GSEA"){
+paste0(pathway_gsea_plot_1()[1, 1], "gsea.pathview.multi.png")}
+else if (input$checkbox_Pathway == "ReactomePA"){
+paste0("reactome_", pathway_react_plot_1()[1,1], ".png")}
+else if (input$checkbox_Pathway == "STRING PPI"){
+paste0("string_network_1.png")
+}
+    },
 content <- function(file){
 if(input$T1 == "Treatment-1" && input$checkbox_Pathway == "Pathway ORA")  
 {file.copy(paste0(pathway_ora_plot_1()[1, 1], ".pathview.png"), file)}
@@ -3846,27 +3914,34 @@ if(input$T1 != "Treatment-1" && input$checkbox_Pathway == "Pathway GSEA")
 {file.copy(paste0(pathway_gsea_plot_1()[1, 1], ".pathview.multi.png"), file)}  
 if(input$checkbox_Pathway == "ReactomePA") 
 {file.copy(paste0("reactome_", pathway_react_plot_1()[1,1], ".png"), file)} 
-if(input$checkbox_Pathway == "STRING PPI") 
-{file.copy("string_network_1.png", file)}
+if(input$T1 == "Treatment-1" && input$checkbox_Pathway == "STRING PPI") 
+{file.copy(paste0("Img_1.png"), file)}
+if(input$T1 == "Treatment-2" && input$checkbox_Pathway == "STRING PPI") 
+{file.copy(paste0("Img_2.png"), file)} 
+if(input$T1 == "Treatment-3" && input$checkbox_Pathway == "STRING PPI") 
+{file.copy(paste0("Img_3.png"), file)}
+if(input$T1 == "Treatment-4" && input$checkbox_Pathway == "STRING PPI") 
+{file.copy(paste0("Img_4.png"), file)}
   },
 contentType = "image/png"
 )
 
 ```
 
-Literature info
-========================================
-Sidebar {.sidebar data-width=350}
-----------------------------------------
+# Literature info
+
+## Sidebar {.sidebar data-width="350"}
+
 ```{r, echo= FALSE}
 textInput(inputId = "text_literature", label = h5(strong("Literature search")), value = "", width = "100%")
 numericInput(inputId = "literature_limit", label = h5(strong("Literature retrival limit")), value = "100", min = 10, max = 5000, step = 100, width = '100%')
 actionButton(inputId = "literature_submit", "Submit")
 ```
 
-Column {.tabset}
-------------------------------------------
+## Column {.tabset}
+
 ### Literature info
+
 ```{r, echo= FALSE}
 literature_search <- eventReactive(input$literature_submit, {europepmc::epmc_search(query = input$text_literature, limit = input$literature_limit, sort = "date")})
 output$literature_result_1 <- DT::renderDataTable({
@@ -3889,6 +3964,7 @@ literature_search()[sort(literature_rows), ]})
 ```
 
 ### Abstract info
+
 ```{r, echo= FALSE}
 selected_rows_abstract <- reactive({
   
@@ -3912,8 +3988,8 @@ selected_rows_abstract()})},options = list(scroller = TRUE, scrollY = 500, scrol
 DT::dataTableOutput("literature_selected")
 ```
 
-Help
-========================================
+# Help
+
 ```{r, echo= FALSE}
 h4(strong("The OMnalysis app permits users to visualize and analyze quantitative differential transcriptomics and proteomics data."))
 p(strong("Investigate the features of application provided above, using a preloaded example of RNA-seq and label free relative quantitative data sets.
