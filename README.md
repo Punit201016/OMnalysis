@@ -72,7 +72,7 @@ uploaded treatments of transcriptomics study.
 8.	Press **_Download button_** to download the **_PCA plot_**.
 
 # Plots
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.png" height = "500" width = "1000"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.png" height = "400" width = "1000"> </img>
 1.	Scatter plot uses log fold change versus log counts per million to visualize your expression data in the form of up and down-regulated genes. Each dot in the scatter plot represents up-regulated genes (green colour), non-significant genes (black colour) and downregulated genes (red colour).
 2.	Select from the **_Uploaded treatments_** checkboxes, Example- Treatment-1, then provide the **_numeric input Pvalue cutoff_** for both scatter and volcano plot and **_FC-cutoff for volcano plot_** to generate plots. The default numeric **_Pvalue cutoff_** is 0.001 and **_FC-cutoff_** is 1.2 for transcriptomics and change be changed.
 3.	Provide plot name (Example- “Scatter plot of hbmec induced with WNV”) in **_Plot title option_**.
@@ -83,7 +83,7 @@ uploaded treatments of transcriptomics study.
 	
 
 # Statistical filtering
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_4.png" height = "600" width = "1000"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_4.png" height = "500" width = "1100"> </img>
 1.	With the help of checkbox button, select one from **_Treatments uploaded tab_** (**_Treatment-1, Treatment-2, Treatment-3 and Treatment-4_**) you can visualize the data and plot of the selected treatment on **_Filter data, Venn Diagram and Histogram_** window.
 2.	Select one from the **_Omics Type_** drop down tab (Transcriptomics or Proteomics).
 3.	Provide threshold numerical values in **_Statistical filtering tab input boxes_** provided to filter out the genes that are unable to cross the threshold values. The default value is 0 for all components (**_LogFC, LogCPM, Pvalue_**).
@@ -95,7 +95,7 @@ uploaded treatments of transcriptomics study.
 9.	Select Venn diagram and Histogram **_image format types_** from **_jpeg, png, pdf and tiff using the drop-down Format_** option.
 
 # Gene ontology (GO) enrichment analysis
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_5.png" height = "500" width = "1000"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_5.png" height = "400" width = "1000"> </img>
 1.	Select the **_Omics Type_** according to the uploaded data types.
 2.	Use the **_Gene ontology classes checkbox_** to perform the categorical analysis of your expression data, either clicking on the **_GO Biological Process_** (multiple molecular activities integrates to perform a process) or **_GO Molecular Function_** (activities at the molecular level by gene product) or **_GO Cellular Component_** (site of function concerning cellular structure). 
 3.	After selecting one of the **_Gene ontology classes_**, provide **_Pvalue cutoff_** and the **_q-value cutoff ORA_**. The default Pvalue and q-value cutoff is 0 and can be adjusted.
@@ -108,7 +108,7 @@ uploaded treatments of transcriptomics study.
 
 
 # GO heatmaps
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_6.png" height = "600" width = "1000"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_6.png" height = "500" width = "1000"> </img>
 1. It is mandatory to **_select at least two similar enriched GO terms from the previous tabular output of GO enrichment analysis of two treatments._**
 2. Select one of the **_GO ORA_** or **_GO GSEA_** methods from **_Heatmap visualization_**.
 3. Click on at least two checkbox buttons from **_Treatments 1, 2, 3 and 4_** to generate **_heatmap (Example if you select Treatment-1 and 3, Treatment-2 will automatically include in the heatmap._** 
@@ -123,7 +123,7 @@ uploaded treatments of transcriptomics study.
 
 
 # Pathway enrichment analysis
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_7.png" height = "600" width = "1100"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_7.png" height = "550" width = "1100"> </img>
 1. Select the **_Omics Type_** according to the uploaded data types.
 2. Select one of the options provided in **_Select Pathway analysis Method (Over-represented analysis (ORA), Gene set enrichment analysis (GSEA), Network Topology Analysis (Human), ReactomePA (Human) and STRING_** to perform pathway analysis.
 3. Provide numeric input in the **_Pvalue cutoff tab_** and select one of the **_pAdjusted Method tabs_** to overcome the chances of getting false positive results. Note that stringency cutoff value may result in a fewer number of gene set enrichment ranked pathways.
@@ -134,7 +134,7 @@ From the pathway analysis result table, **_select one row with the same enriched
 Click on the **_Pathway enrichment result Treatments_** and then **_Download button_** to download result in **_CSV format_**.
 
 # Enriched pathway visualization
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_8.png" height = "300" width = "1200"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_8.png" height = "200" width = "1200"> </img>
 1. After selecting the single and same pathway in all the treatments from the **_pathway enrichment result table_**, you can visualize the pathway using **_pathway visualization tabs and according to the pathway enrichment method performed in the previous section of OMnalysis_**. 
 2. Select one of the **_Pathway ORA, Pathway GSEA, ReactomePA_** and **_STRING PPI_** checkbox provided in **_Pathway visualization_**. You can select any one of them and view the output on the right-side **_subtab panels ORA pathway output_** or **_GSEA pathway output_** or **_Reactome pathway output_** or **_STRING network_**.
 3. If the previous pathway enrichment analysis was ORA, then only the ORA pathway will be visualized in the **_ORA pathway output subtab_**, if not, it will show an error.
