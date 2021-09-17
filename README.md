@@ -62,7 +62,7 @@ uploaded treatments of transcriptomics study.
 
 # PCA
 1. Principal component analysis (PCA) is an unsupervised dimension reduction method that allows us to understand the relationships among the attributes of expression data. PCA analysis calculates the principal components using the Euclidean distance and linear transformation of the expression data. It calculates the most significant variable in the provided data to calculate the first principal component (PC1), second principal component (PC2) and so on.
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_2.png" height = "500" width = "1000"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_2.png" height = "400" width = "1000"> </img>
 2.	Two types of PCA plots are provided, first is _**Variable PCA**_ plot that provides information about the direction and relationship among the variables (treatments) and second is **_Biplot PCA_** that visualize the features of variable PCA plot and observation (genes or proteins) of each treatment in single plot.
 3.	Press _**Variable PCA**_ or **_Biplot PCA_** to generate transcriptomics variable PCA plot, biplot PCA plot in **_Plot visualization_** window. 
 4.	Press Variable PCA or Biplot PCA to generate proteomics variable PCA plot, biplot PCA plot in Plot visualization Proteomic window.
@@ -72,7 +72,7 @@ uploaded treatments of transcriptomics study.
 8.	Press **_Download button_** to download the **_PCA plot_**.
 
 # Plots
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.png" height = "700" width = "800"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_3.png" height = "500" width = "800"> </img>
 1.	Scatter plot uses log fold change versus log counts per million to visualize your expression data in the form of up and down-regulated genes. Each dot in the scatter plot represents up-regulated genes (green colour), non-significant genes (black colour) and downregulated genes (red colour).
 2.	Select from the **_Uploaded treatments_** checkboxes, Example- Treatment-1, then provide the **_numeric input Pvalue cutoff_** for both scatter and volcano plot and **_FC-cutoff for volcano plot_** to generate plots. The default numeric **_Pvalue cutoff_** is 0.001 and **_FC-cutoff_** is 1.2 for transcriptomics and change be changed.
 3.	Provide plot name (Example- “Scatter plot of hbmec induced with WNV”) in **_Plot title option_**.
