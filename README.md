@@ -95,7 +95,7 @@ uploaded treatments of transcriptomics study.
 9.	Select Venn diagram and Histogram **_image format types_** from **_jpeg, png, pdf and tiff using the drop-down Format_** option.
 
 # Gene ontology (GO) enrichment analysis
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_5.png" height = "600" width = "900"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_5.png" height = "500" width = "1000"> </img>
 1.	Select the **_Omics Type_** according to the uploaded data types.
 2.	Use the **_Gene ontology classes checkbox_** to perform the categorical analysis of your expression data, either clicking on the **_GO Biological Process_** (multiple molecular activities integrates to perform a process) or **_GO Molecular Function_** (activities at the molecular level by gene product) or **_GO Cellular Component_** (site of function concerning cellular structure). 
 3.	After selecting one of the **_Gene ontology classes_**, provide **_Pvalue cutoff_** and the **_q-value cutoff ORA_**. The default Pvalue and q-value cutoff is 0 and can be adjusted.
@@ -108,7 +108,7 @@ uploaded treatments of transcriptomics study.
 
 
 # GO heatmaps
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_6.png" height = "700" width = "800"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_6.png" height = "600" width = "1000"> </img>
 1. It is mandatory to **_select at least two similar enriched GO terms from the previous tabular output of GO enrichment analysis of two treatments._**
 2. Select one of the **_GO ORA_** or **_GO GSEA_** methods from **_Heatmap visualization_**.
 3. Click on at least two checkbox buttons from **_Treatments 1, 2, 3 and 4_** to generate **_heatmap (Example if you select Treatment-1 and 3, Treatment-2 will automatically include in the heatmap._** 
@@ -123,7 +123,7 @@ uploaded treatments of transcriptomics study.
 
 
 # Pathway enrichment analysis
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_7.png" height = "600" width = "900"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_7.png" height = "600" width = "1100"> </img>
 1. Select the **_Omics Type_** according to the uploaded data types.
 2. Select one of the options provided in **_Select Pathway analysis Method (Over-represented analysis (ORA), Gene set enrichment analysis (GSEA), Network Topology Analysis (Human), ReactomePA (Human) and STRING_** to perform pathway analysis.
 3. Provide numeric input in the **_Pvalue cutoff tab_** and select one of the **_pAdjusted Method tabs_** to overcome the chances of getting false positive results. Note that stringency cutoff value may result in a fewer number of gene set enrichment ranked pathways.
