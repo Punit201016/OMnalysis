@@ -62,7 +62,7 @@ uploaded treatments of transcriptomics study.
 
 # PCA
 1. Principal component analysis (PCA) is an unsupervised dimension reduction method that allows us to understand the relationships among the attributes of expression data. PCA analysis calculates the principal components using the Euclidean distance and linear transformation of the expression data. It calculates the most significant variable in the provided data to calculate the first principal component (PC1), second principal component (PC2) and so on.
-<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_2.png" height = "400" width = "1000"> </img>
+<img src = "https://github.com/Punit201016/OMnalysis/blob/main/www/om_2.png" height = "300" width = "1100"> </img>
 2.	Two types of PCA plots are provided, first is _**Variable PCA**_ plot that provides information about the direction and relationship among the variables (treatments) and second is **_Biplot PCA_** that visualize the features of variable PCA plot and observation (genes or proteins) of each treatment in single plot.
 3.	Press _**Variable PCA**_ or **_Biplot PCA_** to generate transcriptomics variable PCA plot, biplot PCA plot in **_Plot visualization_** window. 
 4.	Press Variable PCA or Biplot PCA to generate proteomics variable PCA plot, biplot PCA plot in Plot visualization Proteomic window.
